@@ -1,0 +1,18 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+enableFeaturePreview("VERSION_CATALOGS")
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
+rootProject.name = "LargeScaleAndroidApp"
+include ':app'
+include ':core:di'
+include ':feature:one:contract'
+include ':feature:one:core'
+include ':feature:two:contract'
+include ':feature:two:core'
