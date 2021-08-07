@@ -6,6 +6,8 @@ if (project.name == 'app') {
 apply plugin: 'kotlin-android'
 apply plugin: "io.gitlab.arturbosch.detekt"
 
+apply from: "$rootDir/gradle/scripts/versioning.gradle"
+
 android {
     compileSdk 30
     buildToolsVersion "30.0.3"
@@ -33,7 +35,7 @@ android {
         dataBinding false
     }
     lintOptions {
-        lintConfig rootProject.file('config/lint.xml')
+        lintConfig rootProject.file('configutations/lint.xml')
         checkDependencies = true
         warningsAsErrors = true
     }

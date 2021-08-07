@@ -1,10 +1,11 @@
 apply from: "$rootDir/gradle/scripts/module_common.gradle"
 
 android {
+
     defaultConfig {
         applicationId "com.softwarealchemy.lsaa"
-        versionName "1.0"
-        versionCode 1
+        versionName scmVersionName()
+        versionCode scmVersionCode()
     }
 
     buildTypes {
