@@ -9,26 +9,20 @@ apply plugin: "io.gitlab.arturbosch.detekt"
 apply from: "$rootDir/gradle/scripts/versioning.gradle"
 
 android {
-    compileSdk 30
-    buildToolsVersion "30.0.3"
+    compileSdk 31
 
     defaultConfig {
         minSdk 24
-        targetSdk 30
+        targetSdk 31
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {
         jvmTarget = '1.8'
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
     }
     buildFeatures {
         viewBinding true
