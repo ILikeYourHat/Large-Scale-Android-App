@@ -1,9 +1,16 @@
 apply from: "$rootDir/gradle/scripts/module_common.gradle"
 
+android {
+    buildFeatures {
+        compose true
+    }
+}
+
 dependencies {
     implementation projects.core.di
     implementation projects.feature.one.contract
     implementation projects.feature.two.contract
 
+    implementation libs.bundles.compose
     implementation libs.android.appcompat
 }
