@@ -1,8 +1,10 @@
 [versions]
 compose = "1.0.1"
 koin = "3.1.2"
+kotlin = "1.5.21"
 
 [libraries]
+android-gradle = { module = "com.android.tools.build:gradle", version = "7.0.0" }
 android-core = { module = "androidx.core:core-ktx", version = "1.5.0" }
 android-appcompat = { module = "androidx.appcompat:appcompat", version = "1.3.0" }
 android-material = { module = "com.google.android.material:material", version = "1.3.0" }
@@ -17,6 +19,8 @@ compose-activity = { module = "androidx.activity:activity-compose", version = "1
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 
+kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+
 [bundles]
 koin = [
     "koin-core",
@@ -29,3 +33,7 @@ compose = [
     "compose-material",
     "compose-activity"
 ]
+
+[plugins]
+axion = { id = "pl.allegro.tech.build.axion-release", version = "1.13.3" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version = "1.17.0" }

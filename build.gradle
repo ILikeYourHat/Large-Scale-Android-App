@@ -6,14 +6,14 @@ buildscript {
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:7.0.0"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21"
+        classpath(libs.kotlin.gradle)
+        classpath(libs.android.gradle)
     }
 }
 
 plugins {
-    id "io.gitlab.arturbosch.detekt" version "1.17.0" apply false
-    id 'pl.allegro.tech.build.axion-release' version '1.13.3'
+    alias(libs.plugins.axion)
+    alias(libs.plugins.detekt) apply false
 }
 
 task clean(type: Delete) {

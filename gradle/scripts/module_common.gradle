@@ -6,14 +6,15 @@ if (project.name == 'app') {
 apply plugin: 'kotlin-android'
 apply plugin: "io.gitlab.arturbosch.detekt"
 
+apply from: "$rootDir/gradle/scripts/android_sdk.gradle"
 apply from: "$rootDir/gradle/scripts/versioning.gradle"
 
 android {
-    compileSdk 31
+    compileSdk COMPILE_SDK
 
     defaultConfig {
-        minSdk 24
-        targetSdk 31
+        minSdk MIN_SDK
+        targetSdk TARGET_SDK
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -29,8 +30,7 @@ android {
         dataBinding false
     }
     composeOptions {
-        kotlinCompilerVersion "1.5.21"
-        kotlinCompilerExtensionVersion "1.0.1"
+        kotlinCompilerExtensionVersion libs.versions.compose.get()
     }
     lintOptions {
         lintConfig rootProject.file('configutations/lint.xml')
