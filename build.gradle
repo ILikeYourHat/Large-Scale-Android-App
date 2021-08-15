@@ -14,6 +14,7 @@ buildscript {
 plugins {
     alias(libs.plugins.axion)
     alias(libs.plugins.detekt) apply false
+    alias(libs.plugins.gradleVersionsFilter)
 }
 
 task clean(type: Delete) {
