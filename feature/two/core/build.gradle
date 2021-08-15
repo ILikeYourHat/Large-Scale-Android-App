@@ -7,9 +7,9 @@ android {
 }
 
 dependencies {
-    implementation projects.core.di
-    implementation projects.feature.one.contract
-    implementation projects.feature.two.contract
+    implementation project(":core:di")
+    implementation project(":feature:one:contract")
+    implementation project(":feature:two:contract")
 
     implementation libs.bundles.compose
     implementation libs.android.appcompat

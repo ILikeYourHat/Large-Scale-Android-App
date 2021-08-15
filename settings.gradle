@@ -7,7 +7,9 @@ dependencyResolutionManagement {
 }
 
 enableFeaturePreview("VERSION_CATALOGS")
-enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+// Enable when ModuleGraphAssert will support this;
+// https://github.com/jraska/modules-graph-assert/issues/113
+// enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 rootProject.name = "LargeScaleAndroidApp"
 include ':app'

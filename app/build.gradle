@@ -17,9 +17,9 @@ android {
 }
 
 dependencies {
-    implementation projects.core.di
-    implementation projects.feature.one.core
-    implementation projects.feature.two.core
+    implementation project(":core:di")
+    implementation project(":feature:one:core")
+    implementation project(":feature:two:core")
 
     implementation libs.android.material
 }
