@@ -5,6 +5,7 @@ if (project.name == 'app') {
 }
 apply plugin: 'kotlin-android'
 apply plugin: "io.gitlab.arturbosch.detekt"
+apply plugin: "de.mannodermaus.android-junit5"
 
 apply from: "$rootDir/gradle/scripts/android_sdk.gradle"
 apply from: "$rootDir/gradle/scripts/versioning.gradle"
@@ -41,4 +42,10 @@ android {
 
 detekt {
     buildUponDefaultConfig = true
+}
+
+dependencies {
+    testRuntimeOnly libs.junit5.engine
+    testImplementation libs.junit5.api
+    testImplementation libs.junit5.params
 }
