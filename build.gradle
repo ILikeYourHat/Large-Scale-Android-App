@@ -6,8 +6,8 @@ buildscript {
     }
 
     dependencies {
-        classpath(libs.kotlin.gradle)
         classpath(libs.android.gradle)
+        classpath(libs.kotlin.gradle)
         classpath(libs.junit5.gradle)
     }
 }

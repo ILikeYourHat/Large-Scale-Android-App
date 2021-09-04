@@ -1,9 +1,9 @@
-if (project.name == 'app') {
-    apply plugin: 'com.android.application'
+if (project.name == "app") {
+    apply plugin: "com.android.application"
 } else {
-    apply plugin: 'com.android.library'
+    apply plugin: "com.android.library"
 }
-apply plugin: 'kotlin-android'
+apply plugin: "kotlin-android"
 apply plugin: "io.gitlab.arturbosch.detekt"
 apply plugin: "de.mannodermaus.android-junit5"
 
@@ -20,11 +20,8 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
+        sourceCompatibility "1.8"
+        targetCompatibility "1.8"
     }
     buildFeatures {
         viewBinding false
