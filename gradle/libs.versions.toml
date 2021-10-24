@@ -1,5 +1,5 @@
 [versions]
-compose = "1.1.0-alpha05"
+compose = "1.0.4"
 koin = "3.1.2"
 kotlin = "1.5.31"
 junit5 = "5.8.1"
@@ -41,7 +41,7 @@ compose = [
 ]
 
 [plugins]
-axion = { id = "pl.allegro.tech.build.axion-release", version = "1.13.3" }
+axion = { id = "pl.allegro.tech.build.axion-release", version = "1.13.5" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version = "1.18.1" }
 gradleVersionsFilter = { id = "se.ascp.gradle.gradle-versions-filter", version = "0.1.10" }
-moduleGraphAssert = { id = "com.jraska.module.graph.assertion", version = "1.5.1"}
+moduleGraphAssert = { id = "com.jraska.module.graph.assertion", version = "1.6.0"}
