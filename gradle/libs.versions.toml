@@ -1,6 +1,6 @@
 [versions]
 compose = "1.0.4"
-koin = "3.1.2"
+koin = "3.1.3"
 kotlin = "1.5.31"
 junit5 = "5.8.1"
 
@@ -15,7 +15,7 @@ compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 compose-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 compose-material = { module = "androidx.compose.material:material", version.ref = "compose" }
-compose-activity = { module = "androidx.activity:activity-compose", version = "1.3.1" }
+compose-activity = { module = "androidx.activity:activity-compose", version = "1.4.0" }
 
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
@@ -41,7 +41,7 @@ compose = [
 ]
 
 [plugins]
-axion = { id = "pl.allegro.tech.build.axion-release", version = "1.13.5" }
+axion = { id = "pl.allegro.tech.build.axion-release", version = "1.13.6" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version = "1.18.1" }
 gradleVersionsFilter = { id = "se.ascp.gradle.gradle-versions-filter", version = "0.1.10" }
 moduleGraphAssert = { id = "com.jraska.module.graph.assertion", version = "1.6.0"}
