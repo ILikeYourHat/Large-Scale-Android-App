@@ -1,10 +1,4 @@
-apply from: "$rootDir/gradle/scripts/module_common.gradle"
-
-android {
-    buildFeatures {
-        compose true
-    }
-}
+apply from: "$rootDir/gradle/scripts/module_ui.gradle"
 
 dependencies {
     implementation projects.core.di
