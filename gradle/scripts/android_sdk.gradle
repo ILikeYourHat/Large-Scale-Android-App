@@ -1,5 +1,0 @@
-ext {
-    MIN_SDK = 24
-    COMPILE_SDK = 31
-    TARGET_SDK = 31
-}

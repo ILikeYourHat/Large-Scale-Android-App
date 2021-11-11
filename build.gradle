@@ -13,12 +13,8 @@ plugins {
     alias(libs.plugins.moduleGraphAssert)
 }
 
+apply from: "$rootDir/gradle/extension/module_graph_config.gradle"
+
 task clean(type: Delete) {
     delete rootProject.buildDir
-}
-
-moduleGraphAssert {
-    maxHeight = 3
-    moduleLayers = [":app", ":feature:\\S*:core", ":feature:\\S*:contract"]
-    restricted = [":feature:\\S*:contract -X> .*"]
 }

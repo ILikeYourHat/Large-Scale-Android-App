@@ -1,4 +1,4 @@
-apply from: "$rootDir/gradle/scripts/module_common.gradle"
+apply from: "$rootDir/gradle/module/common.gradle"
 
 dependencies {
     api libs.bundles.koin

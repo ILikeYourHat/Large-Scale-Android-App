@@ -1,10 +1,7 @@
-apply from: "$rootDir/gradle/scripts/module_ui.gradle"
+apply from: "$rootDir/gradle/module/feature.gradle"
+apply from: "$rootDir/gradle/extension/compose.gradle"
 
 dependencies {
-    implementation projects.core.di
     implementation projects.feature.one.contract
     implementation projects.feature.two.contract
-
-    implementation libs.bundles.compose
-    implementation libs.android.appcompat
 }

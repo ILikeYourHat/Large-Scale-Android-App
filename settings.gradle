@@ -25,13 +25,8 @@ dependencyResolutionManagement {
     }
 }
 
+rootProject.name = "LargeScaleAndroidApp"
+apply from: "$rootDir/modules.gradle"
+
 enableFeaturePreview("VERSION_CATALOGS")
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
-
-rootProject.name = "LargeScaleAndroidApp"
-include ':app'
-include ':core:di'
-include ':feature:one:contract'
-include ':feature:one:core'
-include ':feature:two:contract'
-include ':feature:two:core'

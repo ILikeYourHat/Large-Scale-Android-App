@@ -1,1 +1,1 @@
-apply from: "$rootDir/gradle/scripts/module_common.gradle"
+apply from: "$rootDir/gradle/module/contract.gradle"

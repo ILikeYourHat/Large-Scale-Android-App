@@ -1,0 +1,5 @@
+moduleGraphAssert {
+    maxHeight = 3
+    moduleLayers = [":app", ":feature:\\S*:core", ":feature:\\S*:contract"]
+    restricted = [":feature:\\S*:contract -X> .*"]
+}

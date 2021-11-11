@@ -1,0 +1,13 @@
+apply plugin: "io.gitlab.arturbosch.detekt"
+
+android {
+    lintOptions {
+        lintConfig rootProject.file('configutations/lint.xml')
+        checkDependencies = true
+        warningsAsErrors = true
+    }
+}
+
+detekt {
+    buildUponDefaultConfig = true
+}
