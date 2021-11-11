@@ -2,7 +2,7 @@ apply from: "$rootDir/gradle/module/app.gradle"
 
 android {
     defaultConfig {
-        applicationId "com.softwarealchemy.lsaa"
+        applicationId "pl.softwarealchemy.lsaa"
     }
 }
 
