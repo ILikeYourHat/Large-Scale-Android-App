@@ -10,10 +10,8 @@ plugins {
     alias(libs.plugins.axion)
     alias(libs.plugins.detekt) apply false
     alias(libs.plugins.gradleVersionsFilter)
-    alias(libs.plugins.moduleGraphAssert)
+    alias(libs.plugins.moduleGraphAssert) apply false
 }
-
-apply from: "$rootDir/gradle/extension/module_graph_config.gradle"
 
 task clean(type: Delete) {
     delete rootProject.buildDir
