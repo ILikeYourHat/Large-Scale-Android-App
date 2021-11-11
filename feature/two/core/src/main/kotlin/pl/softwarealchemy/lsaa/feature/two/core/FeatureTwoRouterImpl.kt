@@ -6,7 +6,7 @@ import pl.softwarealchemy.lsaa.feature.two.contract.FeatureTwoRouter
 
 internal class FeatureTwoRouterImpl(
     private val context: Context
-): FeatureTwoRouter {
+) : FeatureTwoRouter {
     override fun toFeatureTwoActivity(): Intent {
         return Intent(context, FeatureTwoActivity::class.java)
     }

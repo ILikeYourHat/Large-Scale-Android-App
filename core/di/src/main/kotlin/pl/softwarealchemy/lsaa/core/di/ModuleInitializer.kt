@@ -6,7 +6,7 @@ import org.koin.core.module.Module
 
 abstract class ModuleInitializer(
     private val module: Module
-): Initializer<Unit> {
+) : Initializer<Unit> {
 
     override fun create(context: Context) {
         if (context is MultiModuleApplication) {

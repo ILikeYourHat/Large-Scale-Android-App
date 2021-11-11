@@ -6,7 +6,7 @@ import pl.softwarealchemy.lsaa.core.di.ModuleInitializer
 import pl.softwarealchemy.lsaa.feature.one.contract.GreetingProvider
 
 @Suppress("unused")
-internal class FeatureOneInitializer: ModuleInitializer(
+internal class FeatureOneInitializer : ModuleInitializer(
     module {
         single(named("polish")) { GreetingProvider { "Dzień dobry" } }
     }

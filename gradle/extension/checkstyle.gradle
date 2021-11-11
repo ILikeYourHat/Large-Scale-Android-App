@@ -11,3 +11,7 @@ android {
 detekt {
     buildUponDefaultConfig = true
 }
+
+dependencies {
+    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:${libs.versions.detekt.get()}")
+}
