@@ -1,3 +1,3 @@
 apply plugin: "com.android.library"
 apply from: "$rootDir/gradle/extension/android_common_config.gradle"
-apply from: "$rootDir/gradle/extension/junit5.gradle"
+apply from: "$rootDir/gradle/extension/libs/junit5.gradle"
