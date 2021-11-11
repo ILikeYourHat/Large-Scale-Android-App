@@ -1,7 +1,7 @@
 apply plugin: "com.jraska.module.graph.assertion"
 
 moduleGraphAssert {
-    maxHeight = 3
+    maxHeight = 2
     moduleLayers = [":app", ":feature:\\S*:core", ":feature:\\S*:contract"]
     restricted = [":feature:\\S*:contract -X> .*"]
 }
