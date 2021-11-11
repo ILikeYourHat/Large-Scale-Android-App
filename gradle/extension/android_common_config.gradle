@@ -1,5 +1,6 @@
 apply plugin: "kotlin-android"
-apply from: "$rootDir/gradle/extension/checkstyle.gradle"
+apply from: "$rootDir/gradle/extension/check/lint.gradle"
+apply from: "$rootDir/gradle/extension/check/detekt.gradle"
 
 android {
     compileSdk 31

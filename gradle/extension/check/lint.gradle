@@ -1,0 +1,7 @@
+android {
+    lintOptions {
+        lintConfig rootProject.file('configutations/lint.xml')
+        checkDependencies = true
+        warningsAsErrors = true
+    }
+}

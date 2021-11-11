@@ -1,5 +1,5 @@
 apply plugin: "com.android.library"
-apply from: "$rootDir/gradle/extension/android_module.gradle"
+apply from: "$rootDir/gradle/extension/android_common_config.gradle"
 apply from: "$rootDir/gradle/extension/junit5.gradle"
 
 dependencies {
