@@ -1,0 +1,1 @@
+apply from: "$rootDir/gradle/extension/common_config_jvm.gradle"

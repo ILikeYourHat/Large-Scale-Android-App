@@ -1,5 +1,5 @@
 apply plugin: "kotlin-android"
-apply from: "$rootDir/gradle/extension/check/lint.gradle"
+apply from: "$rootDir/gradle/extension/check/lint_android.gradle"
 apply from: "$rootDir/gradle/extension/check/detekt.gradle"
 
 android {
