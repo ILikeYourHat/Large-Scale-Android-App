@@ -8,8 +8,10 @@ android {
 
 dependencies {
     implementation projects.core.di
+    implementation projects.db.tasks
     implementation projects.feature.one.core
     implementation projects.feature.two.core
 
     implementation libs.android.material
+    implementation libs.coroutines.android
 }

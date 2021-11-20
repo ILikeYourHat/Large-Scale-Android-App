@@ -1,5 +1,7 @@
 include ':app'
 include ':core:di'
+include ':db:tasks'
+include ':db:tasks:contract'
 include ':feature:one:contract'
 include ':feature:one:core'
 include ':feature:two:contract'

@@ -1,0 +1,7 @@
+apply from: "$rootDir/gradle/module/feature_android.gradle"
+
+dependencies {
+    implementation projects.db.tasks.contract
+
+    implementation libs.coroutines.core
+}
