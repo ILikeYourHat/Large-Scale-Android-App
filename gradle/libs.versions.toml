@@ -53,4 +53,4 @@ compose = [
 axion = { id = "pl.allegro.tech.build.axion-release", version = "1.13.6" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 gradleVersionsFilter = { id = "se.ascp.gradle.gradle-versions-filter", version = "0.1.10" }
-moduleGraphAssert = { id = "com.jraska.module.graph.assertion", version = "1.6.0"}
+moduleGraphAssert = { id = "com.jraska.module.graph.assertion", version = "2.0.0"}

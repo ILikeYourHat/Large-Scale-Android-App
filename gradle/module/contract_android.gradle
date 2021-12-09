@@ -1,2 +1,4 @@
 apply plugin: "com.android.library"
 apply from: "$rootDir/gradle/extension/common_config_android.gradle"
+
+ext.moduleNameAssertAlias = "Contract"
