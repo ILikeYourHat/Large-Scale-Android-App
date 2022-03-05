@@ -1,17 +1,17 @@
 [versions]
-compose = "1.0.5"
-coroutines = "1.5.2"
+compose = "1.1.1"
+coroutines = "1.6.0"
 detekt = "1.19.0"
-koin = "3.1.4"
-kotlin = "1.5.31"
+koin = "3.1.5"
+kotlin = "1.6.10"
 junit5 = "5.8.2"
 
 [libraries]
-android-gradlePlugin = { module = "com.android.tools.build:gradle", version = "7.0.4" }
+android-gradlePlugin = { module = "com.android.tools.build:gradle", version = "7.1.2" }
 android-core = { module = "androidx.core:core-ktx", version = "1.5.0" }
-android-appcompat = { module = "androidx.appcompat:appcompat", version = "1.4.0" }
-android-material = { module = "com.google.android.material:material", version = "1.4.0" }
-android-startup = { module = "androidx.startup:startup-runtime", version = "1.1.0" }
+android-appcompat = { module = "androidx.appcompat:appcompat", version = "1.4.1" }
+android-material = { module = "com.google.android.material:material", version = "1.5.0" }
+android-startup = { module = "androidx.startup:startup-runtime", version = "1.1.1" }
 
 compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 compose-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
@@ -31,7 +31,7 @@ koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 
 kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 
-junit5-gradlePlugin = { module = "de.mannodermaus.gradle.plugins:android-junit5", version = "1.8.0.0" }
+junit5-gradlePlugin = { module = "de.mannodermaus.gradle.plugins:android-junit5", version = "1.8.1.0" }
 junit5-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit5" }
 junit5-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit5" }
 junit5-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit5" }
@@ -53,4 +53,4 @@ compose = [
 axion = { id = "pl.allegro.tech.build.axion-release", version = "1.13.6" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 gradleVersionsFilter = { id = "se.ascp.gradle.gradle-versions-filter", version = "0.1.10" }
-moduleGraphAssert = { id = "com.jraska.module.graph.assertion", version = "2.0.0"}
+moduleGraphAssert = { id = "com.jraska.module.graph.assertion", version = "2.2.0"}
