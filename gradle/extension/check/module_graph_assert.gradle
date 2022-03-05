@@ -9,3 +9,6 @@ moduleGraphAssert {
             'Implementation -> Tool',
     ]
 }
+
+tasks.matching { it.name == "generateModulesGraphStatistics" || it.name == "generateModulesGraphvizText" }
+        .configureEach {notCompatibleWithConfigurationCache("Not yet ready") }
