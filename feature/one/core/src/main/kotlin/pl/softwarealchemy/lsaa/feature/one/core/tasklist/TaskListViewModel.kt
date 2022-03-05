@@ -9,11 +9,11 @@ import pl.softwarealchemy.lsaa.db.tasks.contract.TasksDatabase
 
 class TaskListViewModel(
     private val tasksDatabase: TasksDatabase
-): ViewModel() {
+) : ViewModel() {
 
     private val _screenState = MutableLiveData<TaskListUiState>(TaskListUiState.Loading)
 
-    val screenState : LiveData<TaskListUiState> = _screenState
+    val screenState: LiveData<TaskListUiState> = _screenState
 
     fun onCreate() {
         refreshTasks()

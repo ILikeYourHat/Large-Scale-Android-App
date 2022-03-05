@@ -12,7 +12,7 @@ class TasksRoomDatabase : TasksDatabase {
 
     override suspend fun getAllTasks(): List<Task> = coroutineScope {
         val tasks = async(Dispatchers.IO) {
-            delay(5000)
+            delay(timeMillis = 5000)
             listOf(
                 Task(
                     id = "1234",

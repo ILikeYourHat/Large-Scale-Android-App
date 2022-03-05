@@ -10,7 +10,6 @@ import java.time.ZonedDateTime
     showSystemUi = true,
 )
 @Composable
-@Suppress("UnusedPrivateMember")
 private fun TaskListScreen_Loading() {
     TaskListScreen(TaskListUiState.Loading) {}
 }
@@ -20,7 +19,6 @@ private fun TaskListScreen_Loading() {
     showSystemUi = true
 )
 @Composable
-@Suppress("UnusedPrivateMember")
 private fun TaskListScreen_Empty() {
     TaskListScreen(TaskListUiState.Ready(emptyList())) {}
 }
@@ -30,13 +28,14 @@ private fun TaskListScreen_Empty() {
     showSystemUi = true
 )
 @Composable
-@Suppress("UnusedPrivateMember")
 private fun TaskListScreen_Ready() {
-    TaskListScreen(TaskListUiState.Ready(
-        listOf(
-            Task("123", "Ulalalal", ZonedDateTime.now()),
-            Task("124", "Test", ZonedDateTime.now()),
-            Task("125", "Test2", ZonedDateTime.now()),
+    TaskListScreen(
+        TaskListUiState.Ready(
+            listOf(
+                Task("123", "Ulalalal", ZonedDateTime.now()),
+                Task("124", "Test", ZonedDateTime.now()),
+                Task("125", "Test2", ZonedDateTime.now()),
+            )
         )
-    )) {}
+    ) {}
 }
