@@ -1,6 +1,7 @@
 package pl.softwarealchemy.lsaa.core.di
 
 import android.app.Application
+import org.koin.android.ext.android.get
 import org.koin.core.module.Module
 
 internal class MultiModuleApplication : Application() {
@@ -10,5 +11,7 @@ internal class MultiModuleApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         initializeKoin(this, modules)
+
+        get<TopActivityProvider>().attach(this)
     }
 }

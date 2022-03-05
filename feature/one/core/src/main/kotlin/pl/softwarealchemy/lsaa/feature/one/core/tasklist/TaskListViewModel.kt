@@ -6,8 +6,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import pl.softwarealchemy.lsaa.db.tasks.contract.TasksDatabase
+import pl.softwarealchemy.lsaa.feature.settings.contract.SettingsNavigator
 
 class TaskListViewModel(
+    private val settingsNavigator: SettingsNavigator,
     private val tasksDatabase: TasksDatabase
 ) : ViewModel() {
 
@@ -19,10 +21,14 @@ class TaskListViewModel(
         refreshTasks()
     }
 
+    fun showSettingsScreen() {
+        settingsNavigator.goToSettings()
+    }
+
     private fun refreshTasks() {
         viewModelScope.launch {
             val tasks = tasksDatabase.getAllTasks()
-            _screenState.value = TaskListUiState.Ready(tasks)
+            _screenState.postValue(TaskListUiState.Ready(tasks))
         }
     }
 }
