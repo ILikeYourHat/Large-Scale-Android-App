@@ -11,5 +11,5 @@ moduleGraphAssert {
     ]
 }
 
-tasks.matching { it.name == "generateModulesGraphStatistics" || it.name == "generateModulesGraphvizText" }
-        .configureEach {notCompatibleWithConfigurationCache("Not yet ready") }
+tasks.matching { ["generateModulesGraphStatistics", "generateModulesGraphvizText"].contains(it.name) }
+        .configureEach {notCompatibleWithConfigurationCache("ModuleGraphAssert not yet ready") }
