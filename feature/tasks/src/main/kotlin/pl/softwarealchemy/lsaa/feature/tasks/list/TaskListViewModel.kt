@@ -5,8 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
-import pl.softwarealchemy.lsaa.feature.tasks.db.TasksDatabase
 import pl.softwarealchemy.lsaa.feature.settings.contract.SettingsNavigator
+import pl.softwarealchemy.lsaa.feature.tasks.db.TasksDatabase
 
 class TaskListViewModel(
     private val settingsNavigator: SettingsNavigator,
