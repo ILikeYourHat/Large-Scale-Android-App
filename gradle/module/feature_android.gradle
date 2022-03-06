@@ -5,6 +5,6 @@ apply from: "$rootDir/gradle/extension/libs/junit5.gradle"
 ext.moduleNameAssertAlias = "Implementation"
 
 dependencies {
-    implementation projects.core.di
+    implementation projects.core.engine
     implementation libs.android.appcompat
 }

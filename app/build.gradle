@@ -7,10 +7,9 @@ android {
 }
 
 dependencies {
-    implementation projects.core.di
-    implementation projects.db.tasks
-    implementation projects.feature.one.core
+    implementation projects.core.engine
     implementation projects.feature.settings
+    implementation projects.feature.tasks
 
     implementation libs.android.material
     implementation libs.coroutines.android

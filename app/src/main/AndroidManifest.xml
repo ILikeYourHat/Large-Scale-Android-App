@@ -4,7 +4,7 @@
     package="pl.softwarealchemy.lsaa.app">
 
     <application
-        android:name="pl.softwarealchemy.lsaa.core.di.MultiModuleApplication"
+        android:name="pl.softwarealchemy.lsaa.core.engine.MultiModuleApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"

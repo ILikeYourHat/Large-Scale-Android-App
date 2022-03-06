@@ -1,7 +1,7 @@
 package pl.softwarealchemy.lsaa.feature.settings
 
 import android.content.Intent
-import pl.softwarealchemy.lsaa.core.di.TopActivityProvider
+import pl.softwarealchemy.lsaa.core.engine.TopActivityProvider
 import pl.softwarealchemy.lsaa.feature.settings.contract.SettingsNavigator
 import pl.softwarealchemy.lsaa.feature.settings.home.SettingsActivity
 
