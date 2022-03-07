@@ -11,7 +11,6 @@ android-gradlePlugin = { module = "com.android.tools.build:gradle", version = "7
 android-core = { module = "androidx.core:core-ktx", version = "1.5.0" }
 android-appcompat = { module = "androidx.appcompat:appcompat", version = "1.4.1" }
 android-material = { module = "com.google.android.material:material", version = "1.5.0" }
-android-startup = { module = "androidx.startup:startup-runtime", version = "1.1.1" }
 
 compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 compose-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
@@ -32,6 +31,7 @@ koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 
 kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
 
 junit5-gradlePlugin = { module = "de.mannodermaus.gradle.plugins:android-junit5", version = "1.8.1.0" }
 junit5-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit5" }

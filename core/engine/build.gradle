@@ -2,5 +2,6 @@ apply from: "$rootDir/gradle/module/common_android.gradle"
 
 dependencies {
     api libs.bundles.koin
-    api libs.android.startup
+
+    implementation libs.kotlin.reflect
 }

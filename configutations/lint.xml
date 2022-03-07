@@ -1,5 +1,3 @@
 <lint>
     <issue id="UnknownIssueId" severity="ignore" />
-    <issue id="EnsureInitializerMetadata" severity="ignore" />
-    <issue id="EnsureInitializerNoArgConstr" severity="ignore" />
 </lint>
