@@ -1,5 +1,11 @@
 apply from: "$rootDir/gradle/module/common_android.gradle"
 
+android {
+    defaultConfig {
+        consumerProguardFiles "proguard-rules.pro"
+    }
+}
+
 dependencies {
     api libs.bundles.koin
 

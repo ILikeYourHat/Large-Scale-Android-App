@@ -12,6 +12,14 @@ android {
         versionCode scmVersionCode()
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs {
+        localRelease {
+            storeFile file("$rootDir/local-key.jks")
+            storePassword 'testtest'
+            keyAlias 'localRelease'
+            keyPassword 'testtest'
+        }
+    }
     buildTypes {
         release {
             debuggable false
@@ -19,6 +27,15 @@ android {
             shrinkResources true
             proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"),
                     "$rootDir/configuration/proguard-rules.pro"
+        }
+        localRelease {
+            initWith release
+            matchingFallbacks = ["release"]
+            signingConfig signingConfigs.localRelease
+            applicationIdSuffix = ".local"
+        }
+        debug {
+            applicationIdSuffix = ".debug"
         }
     }
 }
