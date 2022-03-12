@@ -8,6 +8,7 @@
             android:value="ModuleInitializer" />
 
         <activity android:name=".home.SettingsActivity" />
+        <activity android:name=".licenses.LicensesActivity" />
     </application>
 
 </manifest>
