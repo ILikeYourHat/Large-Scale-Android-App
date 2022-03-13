@@ -1,5 +1,5 @@
 package pl.softwarealchemy.lsaa.feature.settings.contract
 
-interface SettingsNavigator {
-    fun goToSettings()
+public interface SettingsNavigator {
+    public fun goToSettings()
 }

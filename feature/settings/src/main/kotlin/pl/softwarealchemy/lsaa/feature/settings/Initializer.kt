@@ -1,11 +1,13 @@
 package pl.softwarealchemy.lsaa.feature.settings
 
+import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.bind
 import org.koin.dsl.module
 import pl.softwarealchemy.lsaa.core.engine.ModuleInitializer
 import pl.softwarealchemy.lsaa.feature.settings.contract.SettingsNavigator
 import pl.softwarealchemy.lsaa.feature.settings.home.SettingsViewModel
+import pl.softwarealchemy.lsaa.feature.settings.licenses.repository.LicensesRepository
 
 @Suppress("unused")
 internal class Initializer : ModuleInitializer(
@@ -21,5 +23,11 @@ internal class Initializer : ModuleInitializer(
                 topActivityProvider = get()
             )
         } bind SettingsNavigator::class
+
+        single {
+            LicensesRepository(
+                context = androidContext()
+            )
+        }
     }
 )

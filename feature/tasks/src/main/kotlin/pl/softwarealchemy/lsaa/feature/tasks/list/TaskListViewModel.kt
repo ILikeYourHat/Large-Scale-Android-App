@@ -8,7 +8,7 @@ import kotlinx.coroutines.launch
 import pl.softwarealchemy.lsaa.feature.settings.contract.SettingsNavigator
 import pl.softwarealchemy.lsaa.feature.tasks.db.TasksDatabase
 
-class TaskListViewModel(
+internal class TaskListViewModel(
     private val settingsNavigator: SettingsNavigator,
     private val tasksDatabase: TasksDatabase
 ) : ViewModel() {

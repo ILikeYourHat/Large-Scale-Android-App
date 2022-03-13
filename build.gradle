@@ -3,6 +3,7 @@ buildscript {
         classpath(libs.android.gradlePlugin)
         classpath(libs.kotlin.gradlePlugin)
         classpath(libs.junit5.gradlePlugin)
+        classpath(libs.aboutLibraries.gradlePlugin)
     }
 }
 

@@ -3,4 +3,6 @@ apply from: "$rootDir/gradle/extension/libs/compose.gradle"
 
 dependencies {
     implementation projects.feature.settings.contract
+
+    implementation libs.aboutLibraries.core
 }

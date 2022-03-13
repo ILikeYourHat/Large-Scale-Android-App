@@ -7,7 +7,7 @@ import android.os.Looper
 import androidx.annotation.AnyThread
 import androidx.annotation.MainThread
 
-class TopActivityProvider(
+public class TopActivityProvider(
     private val isMainThread: () -> Boolean = { Looper.getMainLooper() == Looper.myLooper() }
 ) {
 
@@ -20,7 +20,7 @@ class TopActivityProvider(
         }
 
     @AnyThread
-    fun onTopActivity(action: (Activity) -> Unit) {
+    public fun onTopActivity(action: (Activity) -> Unit) {
         val topActivity = topActivity
 
         if (topActivity == null) {

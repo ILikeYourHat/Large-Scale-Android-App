@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class SettingsActivity : ComponentActivity() {
+internal class SettingsActivity : ComponentActivity() {
 
     private val vm: SettingsViewModel by viewModel()
 

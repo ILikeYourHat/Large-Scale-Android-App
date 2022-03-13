@@ -1,0 +1,9 @@
+apply plugin: 'com.mikepenz.aboutlibraries.plugin'
+
+aboutLibraries {
+    outputFileName = "licenses.json"
+    allowedLicenses = ["Apache-2.0"]
+    strictMode = "fail"
+    duplicationMode = "merge"
+    duplicationRule = "group"
+}

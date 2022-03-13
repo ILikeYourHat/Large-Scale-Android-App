@@ -25,7 +25,7 @@ import pl.softwarealchemy.lsaa.feature.tasks.db.Task
 import java.time.ZonedDateTime
 
 @Composable
-fun TaskListUi(
+internal fun TaskListUi(
     uiState: TaskListUiState,
     onClick: (String) -> Unit = {}
 ) {

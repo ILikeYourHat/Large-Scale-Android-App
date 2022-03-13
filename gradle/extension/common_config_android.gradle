@@ -14,4 +14,7 @@ android {
         dataBinding false
         buildConfig false
     }
+    kotlinOptions {
+        freeCompilerArgs += '-Xexplicit-api=strict'
+    }
 }
