@@ -6,6 +6,7 @@ detekt = "1.19.0"
 koin = "3.1.5"
 kotlin = "1.6.10"
 junit5 = "5.8.2"
+room = "2.4.2"
 
 [libraries]
 aboutLibraries-core = { module = "com.mikepenz:aboutlibraries-core", version.ref = "aboutLibraries" }
@@ -42,6 +43,10 @@ junit5-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "ju
 junit5-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit5" }
 junit5-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit5" }
 
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref ="room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+
 [bundles]
 koin = [
     "koin-core",
@@ -61,4 +66,5 @@ compose = [
 axion = { id = "pl.allegro.tech.build.axion-release", version = "1.13.6" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 gradleVersionsFilter = { id = "se.ascp.gradle.gradle-versions-filter", version = "0.1.10" }
+ksp = { id = "com.google.devtools.ksp", version = "1.6.10-1.0.4" }
 moduleGraphAssert = { id = "com.jraska.module.graph.assertion", version = "2.2.0"}

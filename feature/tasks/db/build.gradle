@@ -1,7 +1,6 @@
 apply from: "$rootDir/gradle/module/subfeature_android.gradle"
+apply from: "$rootDir/gradle/extension/libs/room.gradle"
 
 dependencies {
-    api libs.koin.core
-
-    implementation libs.coroutines.core
+    api libs.koin.android
 }

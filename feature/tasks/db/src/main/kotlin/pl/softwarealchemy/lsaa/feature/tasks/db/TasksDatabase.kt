@@ -1,5 +1,18 @@
 package pl.softwarealchemy.lsaa.feature.tasks.db
 
-public interface TasksDatabase {
-    public suspend fun getAllTasks(): List<Task>
+import androidx.room.Database
+import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
+
+@TypeConverters(
+    ZonedDateTypeConverter::class,
+)
+@Database(
+    version = 1,
+    entities = [
+        Task::class,
+    ]
+)
+internal abstract class TasksDatabase : RoomDatabase() {
+    abstract fun taskDao(): TasksDao
 }

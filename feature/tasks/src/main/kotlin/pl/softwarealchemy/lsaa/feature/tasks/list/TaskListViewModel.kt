@@ -6,11 +6,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import pl.softwarealchemy.lsaa.feature.settings.contract.SettingsNavigator
-import pl.softwarealchemy.lsaa.feature.tasks.db.TasksDatabase
+import pl.softwarealchemy.lsaa.feature.tasks.db.TasksDao
 
 internal class TaskListViewModel(
     private val settingsNavigator: SettingsNavigator,
-    private val tasksDatabase: TasksDatabase
+    private val tasksDao: TasksDao
 ) : ViewModel() {
 
     private val _screenState = MutableLiveData<TaskListUiState>(TaskListUiState.Loading)
@@ -27,7 +27,7 @@ internal class TaskListViewModel(
 
     private fun refreshTasks() {
         viewModelScope.launch {
-            val tasks = tasksDatabase.getAllTasks()
+            val tasks = tasksDao.getAll()
             _screenState.postValue(TaskListUiState.Ready(tasks))
         }
     }

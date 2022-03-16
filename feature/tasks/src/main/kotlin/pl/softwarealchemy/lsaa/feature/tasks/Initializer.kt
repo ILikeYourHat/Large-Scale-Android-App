@@ -13,7 +13,7 @@ internal class Initializer : ModuleInitializer(
         viewModel {
             TaskListViewModel(
                 settingsNavigator = get(),
-                tasksDatabase = get()
+                tasksDao = get()
             )
         }
     }

@@ -12,6 +12,7 @@ plugins {
     alias(libs.plugins.detekt) apply false
     alias(libs.plugins.gradleVersionsFilter)
     alias(libs.plugins.moduleGraphAssert) apply false
+    alias(libs.plugins.ksp) apply false
 }
 
 task clean(type: Delete) {

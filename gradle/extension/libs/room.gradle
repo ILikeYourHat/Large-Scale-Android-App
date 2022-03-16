@@ -1,0 +1,11 @@
+apply plugin: "com.google.devtools.ksp"
+
+ksp {
+    arg('room.schemaLocation', "$projectDir/schemas")
+}
+
+dependencies {
+    implementation libs.room.runtime
+    implementation libs.room.ktx
+    ksp libs.room.compiler
+}
