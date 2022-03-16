@@ -6,7 +6,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import pl.softwarealchemy.lsaa.feature.settings.contract.SettingsNavigator
+import pl.softwarealchemy.lsaa.feature.tasks.db.Task
 import pl.softwarealchemy.lsaa.feature.tasks.db.TasksDao
+import java.time.ZonedDateTime
+import java.util.UUID
 
 internal class TaskListViewModel(
     private val settingsNavigator: SettingsNavigator,
@@ -29,6 +32,18 @@ internal class TaskListViewModel(
         viewModelScope.launch {
             val tasks = tasksDao.getAll()
             _screenState.postValue(TaskListUiState.Ready(tasks))
+        }
+    }
+
+    fun addTask() {
+        viewModelScope.launch {
+            val task = Task(
+                id = UUID.randomUUID().toString(),
+                content = "Uratować świat",
+                creationTime = ZonedDateTime.now()
+            )
+            tasksDao.insertAll(task)
+            refreshTasks()
         }
     }
 }
