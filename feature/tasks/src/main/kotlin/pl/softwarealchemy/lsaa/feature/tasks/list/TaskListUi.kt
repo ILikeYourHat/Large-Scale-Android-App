@@ -15,12 +15,14 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.FloatingActionButton
 import androidx.compose.material.Icon
+import androidx.compose.material.IconButton
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -33,11 +35,12 @@ import java.time.ZonedDateTime
 internal fun TaskListUi(
     uiState: TaskListUiState,
     onItemClick: (String) -> Unit = {},
+    onSettingsClick: () -> Unit ={},
     onAddClick: () -> Unit = {}
 ) {
     MaterialTheme {
         Scaffold(
-            topBar = { Toolbar() },
+            topBar = { Toolbar(onSettingsClick) },
             content = { Content(uiState, onItemClick) },
             floatingActionButton = { Fab(onAddClick) }
         )
@@ -45,10 +48,19 @@ internal fun TaskListUi(
 }
 
 @Composable
-private fun Toolbar() {
+private fun Toolbar(
+    onSettingsClick: () -> Unit
+) {
     TopAppBar(
         title = { Text("My tasks") },
-        elevation = 2.dp
+        elevation = 2.dp,
+        actions = {
+            IconButton(
+                onClick = onSettingsClick
+            ) {
+                Icon(Icons.Filled.Settings, null)
+            }
+        }
     )
 }
 
@@ -74,7 +86,7 @@ private fun Fab(
     onClick: () -> Unit
 ) {
     FloatingActionButton(
-        onClick = { onClick() }
+        onClick = onClick
     ) {
         Icon(Icons.Filled.Add, "")
     }
