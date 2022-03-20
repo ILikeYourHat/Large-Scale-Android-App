@@ -35,7 +35,7 @@ import java.time.ZonedDateTime
 internal fun TaskListUi(
     uiState: TaskListUiState,
     onItemClick: (String) -> Unit = {},
-    onSettingsClick: () -> Unit ={},
+    onSettingsClick: () -> Unit = {},
     onAddClick: () -> Unit = {}
 ) {
     MaterialTheme {
