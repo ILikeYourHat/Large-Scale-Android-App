@@ -1,0 +1,12 @@
+android {
+    buildTypes {
+        standalone {
+            // noop
+        }
+    }
+    variantFilter { variant ->
+        if(variant.buildType.name == 'debug' || variant.buildType.name == 'release') {
+            variant.setIgnore(true)
+        }
+    }
+}

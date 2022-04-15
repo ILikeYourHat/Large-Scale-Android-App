@@ -28,14 +28,16 @@ android {
             shrinkResources true
             proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"),
                     "$rootDir/configuration/proguard-rules.pro"
+            matchingFallbacks = ["standalone"]
         }
         localRelease {
             initWith release
-            matchingFallbacks = ["release"]
+            matchingFallbacks = ["release", "standalone"]
             signingConfig signingConfigs.localRelease
             applicationIdSuffix = ".local"
         }
         debug {
+            matchingFallbacks = ["standalone"]
             applicationIdSuffix = ".debug"
         }
     }
