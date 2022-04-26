@@ -2,5 +2,8 @@ naming:
   FunctionNaming:
     ignoreAnnotated: ['Composable']
 style:
-    UnusedPrivateMember:
-      ignoreAnnotated: ['Preview']
+  UnusedPrivateMember:
+    ignoreAnnotated: ['Preview']
+complexity:
+  TooManyFunctions:
+    thresholdInFiles: 20

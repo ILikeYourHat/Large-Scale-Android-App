@@ -15,8 +15,7 @@ internal class TaskListActivity : ComponentActivity() {
             setContent {
                 TaskListUi(
                     uiState = uiState,
-                    onSettingsClick = { viewModel.showSettingsScreen() },
-                    onAddClick = { viewModel.addTask() }
+                    uiListener = viewModel
                 )
             }
         }

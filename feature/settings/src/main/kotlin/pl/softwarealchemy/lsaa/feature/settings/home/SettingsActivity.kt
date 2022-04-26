@@ -12,9 +12,7 @@ internal class SettingsActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            SettingsUi(
-                onLicensesClick = { vm.onLicensesSelected() }
-            )
+            SettingsUi(uiListener = vm)
         }
     }
 }

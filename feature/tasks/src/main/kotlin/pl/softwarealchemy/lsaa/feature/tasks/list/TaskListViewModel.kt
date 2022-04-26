@@ -14,7 +14,7 @@ import java.util.UUID
 internal class TaskListViewModel(
     private val settingsNavigator: SettingsNavigator,
     private val tasksDao: TasksDao
-) : ViewModel() {
+) : ViewModel(), TaskListListener {
 
     private val _screenState = MutableLiveData<TaskListUiState>(TaskListUiState.Loading)
 
@@ -24,18 +24,11 @@ internal class TaskListViewModel(
         refreshTasks()
     }
 
-    fun showSettingsScreen() {
+    override fun onShowSettingsClicked() {
         settingsNavigator.goToSettings()
     }
 
-    private fun refreshTasks() {
-        viewModelScope.launch {
-            val tasks = tasksDao.getAll()
-            _screenState.postValue(TaskListUiState.Ready(tasks))
-        }
-    }
-
-    fun addTask() {
+    override fun onAddTaskClicked() {
         viewModelScope.launch {
             val task = Task(
                 id = UUID.randomUUID().toString(),
@@ -44,6 +37,17 @@ internal class TaskListViewModel(
             )
             tasksDao.insertAll(task)
             refreshTasks()
+        }
+    }
+
+    override fun onTaskClicked(task: Task) {
+        // noop
+    }
+
+    private fun refreshTasks() {
+        viewModelScope.launch {
+            val tasks = tasksDao.getAll()
+            _screenState.postValue(TaskListUiState.Ready(tasks))
         }
     }
 }

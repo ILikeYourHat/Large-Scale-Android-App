@@ -5,9 +5,9 @@ import pl.softwarealchemy.lsaa.feature.settings.InternalSettingsNavigator
 
 internal class SettingsViewModel(
     private val settingsNavigator: InternalSettingsNavigator
-) : ViewModel() {
+) : ViewModel(), SettingsListener {
 
-    fun onLicensesSelected() {
+    override fun onLicensesClicked() {
         settingsNavigator.goToLicenses()
     }
 }

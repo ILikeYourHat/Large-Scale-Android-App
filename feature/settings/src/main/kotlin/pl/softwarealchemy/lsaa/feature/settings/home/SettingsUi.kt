@@ -18,12 +18,12 @@ import pl.softwarealchemy.lsaa.feature.settings.R
 
 @Composable
 internal fun SettingsUi(
-    onLicensesClick: () -> Unit = {}
+    uiListener: SettingsListener
 ) {
     MaterialTheme {
         Scaffold(
             topBar = { Toolbar() },
-            content = { Content(onLicensesClick) }
+            content = { Content(uiListener) }
         )
     }
 }
@@ -38,10 +38,13 @@ private fun Toolbar() {
 
 @Composable
 private fun Content(
-    onLicensesClick: () -> Unit
+    uiListener: SettingsListener
 ) {
     Row {
-        Item(text = stringResource(R.string.licenses_title), onLicensesClick)
+        Item(
+            text = stringResource(R.string.licenses_title),
+            onClick = { uiListener.onLicensesClicked() }
+        )
     }
 }
 
@@ -66,5 +69,11 @@ private fun Item(text: String, onClick: () -> Unit) {
 )
 @Composable
 private fun Preview_Normal() {
-    SettingsUi()
+    SettingsUi(
+        uiListener = emptyListener
+    )
+}
+
+private val emptyListener = object : SettingsListener{
+    override fun onLicensesClicked() = Unit
 }

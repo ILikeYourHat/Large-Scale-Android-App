@@ -1,4 +1,3 @@
-@file:Suppress("TooManyFunctions") // TODO
 package pl.softwarealchemy.lsaa.feature.tasks.list
 
 import androidx.compose.foundation.clickable
@@ -34,29 +33,33 @@ import java.time.ZonedDateTime
 @Composable
 internal fun TaskListUi(
     uiState: TaskListUiState,
-    onItemClick: (String) -> Unit = {},
-    onSettingsClick: () -> Unit = {},
-    onAddClick: () -> Unit = {}
+    uiListener: TaskListListener
 ) {
     MaterialTheme {
         Scaffold(
-            topBar = { Toolbar(onSettingsClick) },
-            content = { Content(uiState, onItemClick) },
-            floatingActionButton = { Fab(onAddClick) }
+            topBar = {
+                Toolbar(uiListener)
+            },
+            content = {
+                Content(uiState, uiListener)
+            },
+            floatingActionButton = {
+                Fab(uiListener)
+            }
         )
     }
 }
 
 @Composable
 private fun Toolbar(
-    onSettingsClick: () -> Unit
+    uiListener: TaskListListener
 ) {
     TopAppBar(
         title = { Text("My tasks") },
         elevation = 2.dp,
         actions = {
             IconButton(
-                onClick = onSettingsClick
+                onClick = { uiListener.onShowSettingsClicked() }
             ) {
                 Icon(Icons.Filled.Settings, null)
             }
@@ -67,7 +70,7 @@ private fun Toolbar(
 @Composable
 private fun Content(
     uiState: TaskListUiState,
-    onClick: (String) -> Unit
+    uiListener: TaskListListener
 ) {
     when (uiState) {
         TaskListUiState.Loading -> Loading()
@@ -75,7 +78,7 @@ private fun Content(
             if (uiState.tasks.isEmpty()) {
                 EmptyContent()
             } else {
-                ActualContent(uiState, onClick)
+                ActualContent(uiState, uiListener)
             }
         }
     }
@@ -83,10 +86,10 @@ private fun Content(
 
 @Composable
 private fun Fab(
-    onClick: () -> Unit
+    uiListener: TaskListListener
 ) {
     FloatingActionButton(
-        onClick = onClick
+        onClick = { uiListener.onAddTaskClicked() }
     ) {
         Icon(Icons.Filled.Add, "")
     }
@@ -107,14 +110,17 @@ private fun EmptyContent() {
 @Composable
 private fun ActualContent(
     uiState: TaskListUiState.Ready,
-    onClick: (String) -> Unit
+    uiListener: TaskListListener
 ) {
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.spacedBy(2.dp)
     ) {
         items(uiState.tasks) { task ->
-            TaskItem(task = task, onClick)
+            TaskItem(
+                task = task,
+                onClick = { uiListener.onTaskClicked(task) }
+            )
         }
     }
 }
@@ -167,7 +173,8 @@ private fun Loading() {
 @Composable
 private fun TaskListScreen_Loading() {
     TaskListUi(
-        TaskListUiState.Loading
+        uiState = TaskListUiState.Loading,
+        uiListener = emptyListener
     )
 }
 
@@ -177,7 +184,8 @@ private fun TaskListScreen_Loading() {
 @Composable
 private fun TaskListScreen_Empty() {
     TaskListUi(
-        TaskListUiState.Ready(emptyList())
+        uiState = TaskListUiState.Ready(emptyList()),
+        uiListener = emptyListener
     )
 }
 
@@ -187,12 +195,19 @@ private fun TaskListScreen_Empty() {
 @Composable
 private fun TaskListScreen_Ready() {
     TaskListUi(
-        TaskListUiState.Ready(
+        uiState = TaskListUiState.Ready(
             listOf(
                 Task("123", "Ulalalal", ZonedDateTime.now()),
                 Task("124", "Test", ZonedDateTime.now()),
                 Task("125", "Test2", ZonedDateTime.now()),
             )
-        )
+        ),
+        uiListener = emptyListener
     )
+}
+
+private val emptyListener = object : TaskListListener {
+    override fun onShowSettingsClicked() = Unit
+    override fun onTaskClicked(task: Task) = Unit
+    override fun onAddTaskClicked() = Unit
 }
