@@ -7,12 +7,12 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 internal class SettingsActivity : ComponentActivity() {
 
-    private val vm: SettingsViewModel by viewModel()
+    private val viewModel: SettingsViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            SettingsUi(uiListener = vm)
+            SettingsUi(uiListener = viewModel)
         }
     }
 }
