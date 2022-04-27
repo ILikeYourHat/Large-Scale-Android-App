@@ -74,6 +74,6 @@ private fun Preview_Normal() {
     )
 }
 
-private val emptyListener = object : SettingsListener{
+private val emptyListener = object : SettingsListener {
     override fun onLicensesClicked() = Unit
 }
