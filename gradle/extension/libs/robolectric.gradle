@@ -1,0 +1,14 @@
+android {
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+}
+
+dependencies {
+    testRuntimeOnly libs.junit4.engine
+    testImplementation libs.androidx.test.core
+    testImplementation libs.junit4.api
+    testImplementation libs.robolectric
+}

@@ -15,9 +15,12 @@ aboutLibraries-core = { module = "com.mikepenz:aboutlibraries-core", version.ref
 aboutLibraries-gradlePlugin = { module = "com.mikepenz.aboutlibraries.plugin:aboutlibraries-plugin", version.ref = "aboutLibraries" }
 
 android-gradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "androidGradlePlugin" }
-android-core = { module = "androidx.core:core-ktx", version = "1.5.0" }
-android-appcompat = { module = "androidx.appcompat:appcompat", version = "1.4.1" }
 android-material = { module = "com.google.android.material:material", version = "1.5.0" }
+
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version = "1.4.1" }
+androidx-test-core = { module = "androidx.test:core-ktx", version = "1.4.0" }
+
+assertK = { module = "com.willowtreeapps.assertk:assertk-jvm", version = "0.25" }
 
 compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 compose-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
@@ -29,6 +32,7 @@ compose-lifecycle = { module = "androidx.lifecycle:lifecycle-viewmodel-compose",
 
 coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines"}
 
 detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
 
@@ -40,12 +44,17 @@ koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
 
+junit4-api = { module = "junit:junit" , version = "4.13.2" }
+junit4-engine = { module = "org.junit.vintage:junit-vintage-engine", version.ref = "junit5" }
+
 junit5-gradlePlugin = { module = "de.mannodermaus.gradle.plugins:android-junit5", version = "1.8.1.0" }
 junit5-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit5" }
 junit5-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit5" }
 junit5-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit5" }
 
 mockk = { module = "io.mockk:mockk", version = "1.12.3" }
+
+robolectric = { module = "org.robolectric:robolectric", version = "4.8" }
 
 room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
 room-ktx = { module = "androidx.room:room-ktx", version.ref ="room" }

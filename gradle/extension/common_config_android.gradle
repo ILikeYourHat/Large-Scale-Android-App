@@ -15,6 +15,9 @@ android {
         buildConfig false
     }
     kotlinOptions {
-        freeCompilerArgs += '-Xexplicit-api=strict'
+        freeCompilerArgs += [
+                "-Xexplicit-api=strict",
+                "-Xopt-in=kotlin.RequiresOptIn"
+        ]
     }
 }

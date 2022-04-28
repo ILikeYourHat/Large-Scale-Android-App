@@ -1,11 +1,10 @@
 apply plugin: "com.android.library"
 apply from: "$rootDir/gradle/extension/common_config_android.gradle"
 apply from: "$rootDir/gradle/extension/single_build_variant.gradle"
-apply from: "$rootDir/gradle/extension/libs/junit5.gradle"
 
 ext.moduleNameAssertAlias = "Feature"
 
 dependencies {
     implementation projects.core.engine
-    implementation libs.android.appcompat
+    implementation libs.androidx.appcompat
 }
