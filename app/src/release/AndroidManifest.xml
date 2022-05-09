@@ -4,6 +4,9 @@
 
     <application>
 
+        <!--This preview activity is defined in Compose library.
+        No need to include it in release builds. -->
+        <!--suppress AndroidDomInspection -->
         <activity
             android:name="androidx.compose.ui.tooling.PreviewActivity"
             tools:node="remove" />

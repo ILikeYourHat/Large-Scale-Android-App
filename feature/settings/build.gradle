@@ -1,11 +1,13 @@
 apply from: "$rootDir/gradle/module/feature_android.gradle"
 apply from: "$rootDir/gradle/extension/libs/compose.gradle"
 apply from: "$rootDir/gradle/extension/libs/junit5.gradle"
+apply from: "$rootDir/gradle/extension/libs/robolectric.gradle"
 
 dependencies {
     implementation projects.feature.settings.contract
 
     implementation libs.aboutLibraries.core
 
+    testImplementation libs.assertK
     testImplementation libs.mockk
 }
