@@ -3,7 +3,6 @@ package pl.softwarealchemy.lsaa.feature.settings.licenses.repository
 import android.content.Context
 import com.mikepenz.aboutlibraries.Libs
 import com.mikepenz.aboutlibraries.util.withContext
-import java.io.BufferedReader
 
 internal class LicensesRepository(
     private val context: Context

@@ -66,7 +66,7 @@ internal class LicensesRepositoryTest {
         every {
             context.resources.openRawResource(fakeResourceId)
         } answers {
-            context.assets.open("LicensesRepositoryTest/${slot.captured}_${testCase}.json")
+            context.assets.open("LicensesRepositoryTest/${slot.captured}_$testCase.json")
         }
     }
 }
