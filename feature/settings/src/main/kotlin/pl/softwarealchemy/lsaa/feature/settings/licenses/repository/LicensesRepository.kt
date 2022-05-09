@@ -8,15 +8,17 @@ internal class LicensesRepository(
     private val context: Context
 ) {
     fun getLicenses(): List<LibraryLicense> {
-        val libs = Libs.Builder()
-            .withContext(context)
-            .build()
-
-        return libs.libraries.map {
+        return getRawLicenses().libraries.map { library ->
             LibraryLicense(
-                libraryName = it.name,
-                licenseName = it.licenses.firstOrNull()?.name ?: ""
+                libraryName = library.name,
+                licenseName = library.licenses.firstOrNull()?.name.orEmpty()
             )
         }
+    }
+
+    private fun getRawLicenses(): Libs {
+        return Libs.Builder()
+            .withContext(context)
+            .build()
     }
 }
