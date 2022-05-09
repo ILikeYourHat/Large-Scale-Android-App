@@ -7,6 +7,7 @@ import android.util.Log
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 import org.koin.core.module.Module
+import org.koin.dsl.module
 import kotlin.reflect.KClass
 import kotlin.reflect.full.createInstance
 import kotlin.reflect.full.isSubclassOf
@@ -32,7 +33,7 @@ internal class InitializationEngine {
             .mapNotNull { it to metaData.getString(it) }
             .filter { (_, value) -> value == METADATA_MODULE_INITIALIZER_TAG }
             .mapNotNull { tryToCreateInstance(it.first) }
-            .flatMap { it.modules.toList() }
+            .map { module(moduleDeclaration = it.moduleDeclaration) }
     }
 
     private fun tryToCreateInstance(className: String): ModuleInitializer? {

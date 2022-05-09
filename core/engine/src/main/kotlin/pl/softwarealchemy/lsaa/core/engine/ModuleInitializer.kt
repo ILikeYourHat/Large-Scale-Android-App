@@ -1,7 +1,7 @@
 package pl.softwarealchemy.lsaa.core.engine
 
-import org.koin.core.module.Module
+import org.koin.dsl.ModuleDeclaration
 
 public open class ModuleInitializer(
-    public vararg val modules: Module
+    public val moduleDeclaration: ModuleDeclaration
 )
