@@ -9,11 +9,6 @@ android {
         minSdk 26
         targetSdk 31
     }
-    buildFeatures {
-        viewBinding false
-        dataBinding false
-        buildConfig false
-    }
     kotlinOptions {
         freeCompilerArgs += [
                 "-Xexplicit-api=strict",
