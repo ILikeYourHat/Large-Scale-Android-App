@@ -3,6 +3,7 @@ package pl.softwarealchemy.lsaa.feature.settings.home
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
@@ -23,7 +24,13 @@ internal fun SettingsUi(
     MaterialTheme {
         Scaffold(
             topBar = { Toolbar() },
-            content = { Content(uiListener) }
+            content = { paddingValues ->
+                Content(
+                    modifier = Modifier.fillMaxSize()
+                        .padding(paddingValues),
+                    uiListener = uiListener
+                )
+            }
         )
     }
 }
@@ -38,9 +45,12 @@ private fun Toolbar() {
 
 @Composable
 private fun Content(
+    modifier: Modifier,
     uiListener: SettingsListener
 ) {
-    Row {
+    Row(
+        modifier = modifier
+    ) {
         Item(
             text = stringResource(R.string.licenses_title),
             onClick = { uiListener.onLicensesClicked() }

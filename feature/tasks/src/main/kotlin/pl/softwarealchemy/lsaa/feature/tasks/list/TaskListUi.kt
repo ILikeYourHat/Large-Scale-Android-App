@@ -40,8 +40,13 @@ internal fun TaskListUi(
             topBar = {
                 Toolbar(uiListener)
             },
-            content = {
-                Content(uiState, uiListener)
+            content = { paddingValues ->
+                Content(
+                    modifier = Modifier.fillMaxSize()
+                        .padding(paddingValues),
+                    uiState = uiState,
+                    uiListener = uiListener
+                )
             },
             floatingActionButton = {
                 Fab(uiListener)
@@ -69,16 +74,27 @@ private fun Toolbar(
 
 @Composable
 private fun Content(
+    modifier: Modifier,
     uiState: TaskListUiState,
     uiListener: TaskListListener
 ) {
     when (uiState) {
-        TaskListUiState.Loading -> Loading()
+        TaskListUiState.Loading -> {
+            Loading(
+                modifier = modifier
+            )
+        }
         is TaskListUiState.Ready -> {
             if (uiState.tasks.isEmpty()) {
-                EmptyContent()
+                EmptyContent(
+                    modifier = modifier
+                )
             } else {
-                ActualContent(uiState, uiListener)
+                ActualContent(
+                    modifier = modifier,
+                    uiState = uiState,
+                    uiListener = uiListener
+                )
             }
         }
     }
@@ -96,9 +112,11 @@ private fun Fab(
 }
 
 @Composable
-private fun EmptyContent() {
+private fun EmptyContent(
+    modifier: Modifier
+) {
     Box(
-        modifier = Modifier.fillMaxSize()
+        modifier = modifier
     ) {
         Text(
             modifier = Modifier.align(Alignment.Center),
@@ -109,11 +127,12 @@ private fun EmptyContent() {
 
 @Composable
 private fun ActualContent(
+    modifier: Modifier,
     uiState: TaskListUiState.Ready,
     uiListener: TaskListListener
 ) {
     LazyColumn(
-        modifier = Modifier.fillMaxSize(),
+        modifier = modifier,
         verticalArrangement = Arrangement.spacedBy(2.dp)
     ) {
         items(uiState.tasks) { task ->
@@ -151,10 +170,11 @@ private fun TaskItem(
 }
 
 @Composable
-private fun Loading() {
+private fun Loading(
+    modifier: Modifier
+) {
     Box(
-        modifier = Modifier
-            .fillMaxSize()
+        modifier = modifier
     ) {
         CircularProgressIndicator(
             modifier = Modifier

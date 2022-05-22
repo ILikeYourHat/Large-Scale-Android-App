@@ -1,12 +1,12 @@
 [versions]
 aboutLibraries = "10.2.0"
 androidGradlePlugin = "7.2.0"
-compose = "1.1.1"
+compose = "1.2.0-beta02"
 coroutines = "1.6.1"
 detekt = "1.20.0"
 koin = "3.2.0"
-kotlin = "1.6.10"
-ksp = "1.6.10-1.0.4"
+kotlin = "1.6.21"
+ksp = "1.6.21-1.0.5"
 junit5 = "5.8.2"
 room = "2.4.2"
 
@@ -18,6 +18,7 @@ android-gradlePlugin = { module = "com.android.tools.build:gradle", version.ref 
 android-material = { module = "com.google.android.material:material", version = "1.6.0" }
 
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version = "1.4.1" }
+androidx-poolingContainer = { module = "androidx.customview:customview-poolingcontainer", version = "1.0.0-beta02" } # Remove when AS Dolphin will be available
 androidx-test-core = { module = "androidx.test:core-ktx", version = "1.4.0" }
 
 assertK = { module = "com.willowtreeapps.assertk:assertk-jvm", version = "0.25" }
@@ -66,6 +67,7 @@ koin = [
     "koin-android"
 ]
 compose = [
+    "androidx-poolingContainer",
     "compose-ui",
     "compose-tooling",
     "compose-foundation",
@@ -78,6 +80,6 @@ compose = [
 [plugins]
 axion = { id = "pl.allegro.tech.build.axion-release", version = "1.13.7" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
-gradleVersionsFilter = { id = "se.ascp.gradle.gradle-versions-filter", version = "0.1.14" }
+gradleVersionsFilter = { id = "se.ascp.gradle.gradle-versions-filter", version = "0.1.16" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 moduleGraphAssert = { id = "com.jraska.module.graph.assertion", version = "2.2.0"}

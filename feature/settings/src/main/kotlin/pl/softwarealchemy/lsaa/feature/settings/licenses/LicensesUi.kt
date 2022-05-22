@@ -21,12 +21,18 @@ import pl.softwarealchemy.lsaa.feature.settings.licenses.repository.LibraryLicen
 
 @Composable
 internal fun LicensesUi(
-    licenses: List<LibraryLicense> = emptyList()
+    licenses: List<LibraryLicense>
 ) {
     MaterialTheme {
         Scaffold(
             topBar = { Toolbar() },
-            content = { Content(licenses = licenses) }
+            content = { paddingValues ->
+                Content(
+                    modifier = Modifier.fillMaxSize()
+                        .padding(paddingValues),
+                    licenses = licenses
+                )
+            }
         )
     }
 }
@@ -40,9 +46,12 @@ private fun Toolbar() {
 }
 
 @Composable
-private fun Content(licenses: List<LibraryLicense>) {
+private fun Content(
+    modifier: Modifier,
+    licenses: List<LibraryLicense>
+) {
     LazyColumn(
-        modifier = Modifier.fillMaxSize(),
+        modifier = modifier,
         verticalArrangement = Arrangement.spacedBy(2.dp)
     ) {
         items(licenses) { Item(it) }
@@ -74,5 +83,11 @@ private fun Item(license: LibraryLicense) {
 )
 @Composable
 private fun Preview_Normal() {
-    LicensesUi()
+    LicensesUi(
+        licenses = listOf(
+            LibraryLicense("koin", "Apache 2.0"),
+            LibraryLicense("test", ""),
+            LibraryLicense("koin", "Apache 2.0"),
+        )
+    )
 }

@@ -12,7 +12,7 @@ android {
     kotlinOptions {
         freeCompilerArgs += [
                 "-Xexplicit-api=strict",
-                "-Xopt-in=kotlin.RequiresOptIn"
+                "-opt-in=kotlin.RequiresOptIn"
         ]
     }
 }
