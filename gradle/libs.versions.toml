@@ -1,6 +1,6 @@
 [versions]
 aboutLibraries = "10.2.0"
-androidGradlePlugin = "7.2.0"
+androidGradlePlugin = "7.2.1"
 compose = "1.2.0-beta02"
 coroutines = "1.6.1"
 detekt = "1.20.0"
@@ -78,7 +78,7 @@ compose = [
 ]
 
 [plugins]
-axion = { id = "pl.allegro.tech.build.axion-release", version = "1.13.7" }
+axion = { id = "pl.allegro.tech.build.axion-release", version = "1.13.9" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 gradleVersionsFilter = { id = "se.ascp.gradle.gradle-versions-filter", version = "0.1.16" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
