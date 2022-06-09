@@ -1,3 +1,7 @@
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+[![GitHub tag](https://img.shields.io/github/tag/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/tags/)
+[![GitHub latest commit](https://badgen.net/github/last-commit/Naereen/Strapdown.js)](https://GitHub.com/Naereen/StrapDown.js/commit/)
+
 # Large Scale Android App
 
 Proof of concept architecture for a (very) large android application. Designed to handle 100+ modules
@@ -20,6 +24,9 @@ as possible.
 - easy versioning, thanks to Axion plugin
 - generate project module graph, thanks to ModuleGraphAssert plugin
 - check if project is up to date, thanks to GradleVersionsFilter plugin
+
+## Module graph:
+![Module graph](img/module_graph.png)
 
 ## Nice to know Gradle tasks:
 - `./gradlew wrapper --gradle-version X.Y.Z` - update Gradle to version X.Y.Z
