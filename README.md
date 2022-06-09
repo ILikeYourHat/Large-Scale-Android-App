@@ -1,6 +1,6 @@
-[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
-[![GitHub tag](https://img.shields.io/github/tag/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/tags/)
-[![GitHub latest commit](https://badgen.net/github/last-commit/Naereen/Strapdown.js)](https://GitHub.com/Naereen/StrapDown.js/commit/)
+[![GitHub license](https://img.shields.io/github/license/ILikeYourHat/Large-Scale-Android-App.js.svg)](https://github.com/ILikeYourHat/Large-Scale-Android-App.js/blob/master/LICENSE)
+[![GitHub tag](https://img.shields.io/github/tag/ILikeYourHat/Large-Scale-Android-App.js.svg)](https://GitHub.com/ILikeYourHat/Large-Scale-Android-App.js/tags/)
+[![GitHub latest commit](https://badgen.net/github/last-commit/ILikeYourHat/Large-Scale-Android-App.js)](https://GitHub.com/ILikeYourHat/Large-Scale-Android-App.js/commit/)
 
 # Large Scale Android App
 
