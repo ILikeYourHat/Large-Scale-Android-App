@@ -1,6 +1,5 @@
-[![GitHub license](https://img.shields.io/github/license/ILikeYourHat/Large-Scale-Android-App.js.svg)](https://github.com/ILikeYourHat/Large-Scale-Android-App.js/blob/master/LICENSE)
-[![GitHub tag](https://img.shields.io/github/tag/ILikeYourHat/Large-Scale-Android-App.js.svg)](https://GitHub.com/ILikeYourHat/Large-Scale-Android-App.js/tags/)
-[![GitHub latest commit](https://badgen.net/github/last-commit/ILikeYourHat/Large-Scale-Android-App.js)](https://GitHub.com/ILikeYourHat/Large-Scale-Android-App.js/commit/)
+[![GitHub license](https://img.shields.io/github/license/ILikeYourHat/Large-Scale-Android-App)](https://github.com/ILikeYourHat/Large-Scale-Android-App/blob/master/LICENSE.md)
+![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/ILikeYourHat/Large-Scale-Android-App)
 
 # Large Scale Android App
 
