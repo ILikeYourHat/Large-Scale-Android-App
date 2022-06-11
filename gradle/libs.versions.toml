@@ -6,7 +6,7 @@ coroutines = "1.6.2"
 detekt = "1.20.0"
 koin = "3.2.0"
 kotlin = "1.6.21"
-ksp = "1.6.21-1.0.5"
+ksp = "1.6.21-1.0.6"
 junit5 = "5.8.2"
 room = "2.4.2"
 
@@ -78,7 +78,7 @@ compose = [
 ]
 
 [plugins]
-axion = { id = "pl.allegro.tech.build.axion-release", version = "1.13.10" }
+axion = { id = "pl.allegro.tech.build.axion-release", version = "1.13.14" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 gradleVersionsFilter = { id = "se.ascp.gradle.gradle-versions-filter", version = "0.1.16" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
