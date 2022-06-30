@@ -1,12 +1,13 @@
 [versions]
-aboutLibraries = "10.3.0"
+aboutLibraries = "10.3.1"
 androidGradlePlugin = "7.2.1"
-compose = "1.2.0-beta03"
-coroutines = "1.6.2"
+compose = "1.2.0-rc03"
+composeCompiler = "1.2.0"
+coroutines = "1.6.3"
 detekt = "1.20.0"
 koin = "3.2.0"
-kotlin = "1.6.21"
-ksp = "1.6.21-1.0.6"
+kotlin = "1.7.0"
+ksp = "1.7.0-1.0.6"
 junit5 = "5.8.2"
 room = "2.4.2"
 
@@ -18,18 +19,20 @@ android-gradlePlugin = { module = "com.android.tools.build:gradle", version.ref 
 android-material = { module = "com.google.android.material:material", version = "1.6.1" }
 
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version = "1.4.2" }
-androidx-poolingContainer = { module = "androidx.customview:customview-poolingcontainer", version = "1.0.0-beta02" } # Remove when AS Dolphin will be available
+# Remove when AS Dolphin will be available
+androidx-poolingContainer = { module = "androidx.customview:customview-poolingcontainer", version = "1.0.0-rc01" }
 androidx-test-core = { module = "androidx.test:core-ktx", version = "1.4.0" }
 
 assertK = { module = "com.willowtreeapps.assertk:assertk-jvm", version = "0.25" }
 
+compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "composeCompiler" }
 compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 compose-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 compose-material = { module = "androidx.compose.material:material", version.ref = "compose" }
-compose-activity = { module = "androidx.activity:activity-compose", version = "1.4.0" }
+compose-activity = { module = "androidx.activity:activity-compose", version = "1.5.0" }
 compose-livedata = { module = "androidx.compose.runtime:runtime-livedata", version.ref = "compose" }
-compose-lifecycle = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version = "2.4.1" }
+compose-lifecycle = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version = "2.5.0" }
 
 coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
@@ -37,7 +40,8 @@ coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", ve
 
 detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
 
-desugaring = { module = "com.android.tools:desugar_jdk_libs", version = "1.1.5" }
+# Version 1.2.0 requires AGP 7.3.0 or later
+desugaring = { module = "com.android.tools:desugar_jdk_libs", version = "1.1.6" }
 
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
@@ -68,6 +72,7 @@ koin = [
 ]
 compose = [
     "androidx-poolingContainer",
+    "compose-compiler",
     "compose-ui",
     "compose-tooling",
     "compose-foundation",
