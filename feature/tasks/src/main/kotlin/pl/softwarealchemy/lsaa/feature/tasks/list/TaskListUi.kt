@@ -217,9 +217,21 @@ internal fun TaskListUi_Ready() {
     TaskListUi(
         uiState = TaskListUiState.Ready(
             listOf(
-                Task("123", "Ulalalal", ZonedDateTime.now()),
-                Task("124", "Test", ZonedDateTime.now()),
-                Task("125", "Test2", ZonedDateTime.now()),
+                Task(
+                    id = "123",
+                    content = "Ulalal",
+                    creationTime = ZonedDateTime.parse("2007-12-03T10:15:30+01:00[Europe/Paris]")
+                ),
+                Task(
+                    id = "124",
+                    content = "Test",
+                    creationTime = ZonedDateTime.parse("2007-12-03T10:15:30+01:00[Europe/Paris]")
+                ),
+                Task(
+                    id = "125",
+                    content = "Test2",
+                    creationTime = ZonedDateTime.parse("2007-12-03T10:15:30+01:00[Europe/Paris]")
+                ),
             )
         ),
         uiListener = emptyListener

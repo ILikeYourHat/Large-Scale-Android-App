@@ -1,6 +1,5 @@
 package pl.softwarealchemy.lsaa.feature.settings.licenses.ui
 
-import app.cash.paparazzi.DeviceConfig.Companion.PIXEL_5
 import app.cash.paparazzi.Paparazzi
 import org.junit.Rule
 import org.junit.Test
@@ -10,7 +9,7 @@ internal class LicensesUiTest {
 
     @get:Rule
     val paparazzi = Paparazzi(
-        deviceConfig = PIXEL_5
+        maxPercentDifference = 0.0
     )
 
     @Test
