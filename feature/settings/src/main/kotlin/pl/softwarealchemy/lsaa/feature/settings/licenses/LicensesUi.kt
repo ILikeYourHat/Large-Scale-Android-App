@@ -82,7 +82,7 @@ private fun Item(license: LibraryLicense) {
     showBackground = true
 )
 @Composable
-private fun Preview_Normal() {
+internal fun LicensesUi_Normal() {
     LicensesUi(
         licenses = listOf(
             LibraryLicense("koin", "Apache 2.0"),

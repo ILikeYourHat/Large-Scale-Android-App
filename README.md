@@ -19,6 +19,7 @@ as possible.
 
 ## Other nice features:
 - UI in Jetpack Compose
+- screenshot tests in Papparazzi
 - gradle version catalog & typesafe project accessors
 - easy versioning, thanks to Axion plugin
 - generate project module graph, thanks to ModuleGraphAssert plugin

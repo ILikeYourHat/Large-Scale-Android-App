@@ -191,7 +191,7 @@ private fun Loading(
     showBackground = true
 )
 @Composable
-private fun TaskListScreen_Loading() {
+internal fun TaskListUi_Loading() {
     TaskListUi(
         uiState = TaskListUiState.Loading,
         uiListener = emptyListener
@@ -202,7 +202,7 @@ private fun TaskListScreen_Loading() {
     showBackground = true
 )
 @Composable
-private fun TaskListScreen_Empty() {
+internal fun TaskListUi_Empty() {
     TaskListUi(
         uiState = TaskListUiState.Ready(emptyList()),
         uiListener = emptyListener
@@ -213,7 +213,7 @@ private fun TaskListScreen_Empty() {
     showBackground = true
 )
 @Composable
-private fun TaskListScreen_Ready() {
+internal fun TaskListUi_Ready() {
     TaskListUi(
         uiState = TaskListUiState.Ready(
             listOf(

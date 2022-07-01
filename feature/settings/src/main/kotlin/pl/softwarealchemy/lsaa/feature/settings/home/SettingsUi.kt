@@ -78,7 +78,7 @@ private fun Item(text: String, onClick: () -> Unit) {
     showBackground = true
 )
 @Composable
-private fun Preview_Normal() {
+internal fun SettingsUi_Normal() {
     SettingsUi(
         uiListener = emptyListener
     )
