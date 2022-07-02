@@ -25,8 +25,10 @@ import androidx.compose.material.icons.filled.Settings
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import pl.softwarealchemy.lsaa.feature.tasks.R
 import pl.softwarealchemy.lsaa.feature.tasks.db.Task
 import java.time.ZonedDateTime
 
@@ -42,7 +44,8 @@ internal fun TaskListUi(
             },
             content = { paddingValues ->
                 Content(
-                    modifier = Modifier.fillMaxSize()
+                    modifier = Modifier
+                        .fillMaxSize()
                         .padding(paddingValues),
                     uiState = uiState,
                     uiListener = uiListener
@@ -66,7 +69,7 @@ private fun Toolbar(
             IconButton(
                 onClick = { uiListener.onShowSettingsClicked() }
             ) {
-                Icon(Icons.Filled.Settings, null)
+                Icon(Icons.Filled.Settings, stringResource(R.string.tsk_settings_button))
             }
         }
     )

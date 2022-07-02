@@ -13,4 +13,6 @@ dependencies {
 
     implementation libs.android.material
     implementation libs.coroutines.android
+
+    androidTestImplementation libs.compose.uiTest
 }
