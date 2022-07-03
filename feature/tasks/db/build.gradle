@@ -1,6 +1,7 @@
 apply from: "$rootDir/gradle/module/subfeature_android.gradle"
 apply from: "$rootDir/gradle/extension/libs/room.gradle"
 apply from: "$rootDir/gradle/extension/libs/robolectric.gradle"
+apply from: "$rootDir/gradle/extension/libs/junit5.gradle"
 
 dependencies {
     api libs.koin.android
