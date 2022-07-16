@@ -14,6 +14,6 @@ internal class SettingsScreenObject private constructor(
     }
 
     companion object {
-        fun AndroidComposeTestRule<*,*>.onSettingsScreen() = SettingsScreenObject(this)
+        fun AndroidComposeTestRule<*, *>.onSettingsScreen() = SettingsScreenObject(this)
     }
 }

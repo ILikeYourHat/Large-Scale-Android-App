@@ -5,7 +5,7 @@ import androidx.compose.ui.test.junit4.AndroidComposeTestRule
 import androidx.compose.ui.test.performClick
 
 internal class TaskListScreenObject private constructor(
-    private val composeTestRule: AndroidComposeTestRule<*,*>
+    private val composeTestRule: AndroidComposeTestRule<*, *>
 ) {
 
     fun clickSettings() = apply {
@@ -15,6 +15,6 @@ internal class TaskListScreenObject private constructor(
     }
 
     companion object {
-        fun AndroidComposeTestRule<*,*>.onTaskListScreen() = TaskListScreenObject(this)
+        fun AndroidComposeTestRule<*, *>.onTaskListScreen() = TaskListScreenObject(this)
     }
 }
