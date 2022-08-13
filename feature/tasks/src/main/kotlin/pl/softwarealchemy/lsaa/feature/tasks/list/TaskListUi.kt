@@ -77,9 +77,9 @@ private fun Toolbar(
 
 @Composable
 private fun Content(
-    modifier: Modifier,
     uiState: TaskListUiState,
-    uiListener: TaskListListener
+    uiListener: TaskListListener,
+    modifier: Modifier = Modifier
 ) {
     when (uiState) {
         TaskListUiState.Loading -> {
@@ -116,7 +116,7 @@ private fun Fab(
 
 @Composable
 private fun EmptyContent(
-    modifier: Modifier
+    modifier: Modifier = Modifier
 ) {
     Box(
         modifier = modifier
@@ -130,9 +130,9 @@ private fun EmptyContent(
 
 @Composable
 private fun ActualContent(
-    modifier: Modifier,
     uiState: TaskListUiState.Ready,
-    uiListener: TaskListListener
+    uiListener: TaskListListener,
+    modifier: Modifier = Modifier
 ) {
     LazyColumn(
         modifier = modifier,
@@ -150,12 +150,12 @@ private fun ActualContent(
 @Composable
 private fun TaskItem(
     task: Task,
-    onClick: (String) -> Unit
+    onClick: () -> Unit
 ) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .clickable { onClick(task.id) }
+            .clickable { onClick() }
     ) {
         Column(
             modifier = Modifier.padding(8.dp)
@@ -174,7 +174,7 @@ private fun TaskItem(
 
 @Composable
 private fun Loading(
-    modifier: Modifier
+    modifier: Modifier = Modifier
 ) {
     Box(
         modifier = modifier

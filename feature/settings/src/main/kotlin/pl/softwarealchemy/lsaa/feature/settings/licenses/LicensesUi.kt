@@ -47,8 +47,8 @@ private fun Toolbar() {
 
 @Composable
 private fun Content(
-    modifier: Modifier,
-    licenses: List<LibraryLicense>
+    licenses: List<LibraryLicense>,
+    modifier: Modifier = Modifier
 ) {
     LazyColumn(
         modifier = modifier,

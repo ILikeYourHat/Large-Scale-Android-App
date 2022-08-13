@@ -45,8 +45,8 @@ private fun Toolbar() {
 
 @Composable
 private fun Content(
-    modifier: Modifier,
-    uiListener: SettingsListener
+    uiListener: SettingsListener,
+    modifier: Modifier = Modifier
 ) {
     Row(
         modifier = modifier
