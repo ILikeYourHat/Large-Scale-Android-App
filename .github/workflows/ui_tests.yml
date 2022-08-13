@@ -1,8 +1,8 @@
-name: "Check project health"
-on: push
+name: "Run UI tests"
+on: workflow_dispatch
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  test:
+    runs-on: macos-latest
 
     steps:
       - name: Checkout project
@@ -17,12 +17,11 @@ jobs:
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@v1
 
-      - name: Gradle check app
+      - name: Init Gradle cache
         uses: gradle/gradle-build-action@v2
-        with:
-          arguments: check
 
-      - name: Gradle assemble app
-        uses: gradle/gradle-build-action@v2
+      - name: Run UI tests
+        uses: reactivecircus/android-emulator-runner@v2
         with:
-          arguments: assemble
+          api-level: 30
+          script: ./gradlew connectedAndroidTest
