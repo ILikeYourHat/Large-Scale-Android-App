@@ -1,0 +1,12 @@
+apply plugin: "kotlin"
+apply from: "$rootDir/gradle/libs/lint_jvm.gradle"
+apply from: "$rootDir/gradle/libs/detekt.gradle"
+
+compileJava {
+    sourceCompatibility = libs.versions.java.get()
+    targetCompatibility = libs.versions.java.get()
+}
+
+kotlin {
+    explicitApi()
+}

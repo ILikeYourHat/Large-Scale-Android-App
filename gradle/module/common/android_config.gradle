@@ -1,0 +1,25 @@
+apply plugin: "kotlin-android"
+apply from: "$rootDir/gradle/libs/lint_android.gradle"
+apply from: "$rootDir/gradle/libs/detekt.gradle"
+
+android {
+    compileSdk 32
+    defaultConfig {
+        minSdk 26
+        targetSdk 31
+    }
+    kotlinOptions {
+        freeCompilerArgs += [
+                "-Xexplicit-api=strict"
+        ]
+    }
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility = libs.versions.java.get()
+        targetCompatibility = libs.versions.java.get()
+    }
+}
+
+dependencies {
+    coreLibraryDesugaring libs.desugaring
+}

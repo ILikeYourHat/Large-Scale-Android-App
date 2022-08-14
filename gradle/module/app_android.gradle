@@ -1,8 +1,8 @@
 apply plugin: "com.android.application"
-apply from: "$rootDir/gradle/extension/common_config_android.gradle"
-apply from: "$rootDir/gradle/extension/versioning.gradle"
-apply from: "$rootDir/gradle/extension/check/module_graph_assert.gradle"
-apply from: "$rootDir/gradle/extension/libs/about_libraries.gradle"
+apply from: "$rootDir/gradle/module/common/android_config.gradle"
+apply from: "$rootDir/gradle/libs/axion.gradle"
+apply from: "$rootDir/gradle/libs/module_graph_assert.gradle"
+apply from: "$rootDir/gradle/libs/about_libraries.gradle"
 
 ext.moduleNameAssertAlias = "App"
 

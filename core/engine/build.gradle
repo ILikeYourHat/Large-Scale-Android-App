@@ -1,5 +1,5 @@
-apply from: "$rootDir/gradle/module/common_android.gradle"
-apply from: "$rootDir/gradle/extension/libs/junit5.gradle"
+apply from: "$rootDir/gradle/module/tool_android.gradle"
+apply from: "$rootDir/gradle/libs/junit5.gradle"
 
 android {
     defaultConfig {

@@ -1,5 +1,5 @@
 apply from: "$rootDir/gradle/module/feature_android.gradle"
-apply from: "$rootDir/gradle/extension/libs/compose.gradle"
+apply from: "$rootDir/gradle/libs/compose.gradle"
 
 dependencies {
     implementation projects.feature.settings.contract

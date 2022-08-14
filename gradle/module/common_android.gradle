@@ -1,5 +1,0 @@
-apply plugin: "com.android.library"
-apply from: "$rootDir/gradle/extension/common_config_android.gradle"
-apply from: "$rootDir/gradle/extension/single_build_variant.gradle"
-
-ext.moduleNameAssertAlias = "Tool"
