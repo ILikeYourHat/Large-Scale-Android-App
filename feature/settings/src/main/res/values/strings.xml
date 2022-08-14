@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="settings_title">Settings</string>
-    <string name="licenses_title">Licenses</string>
+    <string name="stg_settingsScreen_title">Settings</string>
+    <string name="stg_licensesScreen_title">Licenses</string>
 </resources>

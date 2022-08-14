@@ -7,7 +7,7 @@
         android:name="pl.softwarealchemy.lsaa.core.engine.MultiModuleApplication"
         android:allowBackup="false"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
+        android:label="@string/app_global_name"
         android:roundIcon="@drawable/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LargeScaleAndroidApp"

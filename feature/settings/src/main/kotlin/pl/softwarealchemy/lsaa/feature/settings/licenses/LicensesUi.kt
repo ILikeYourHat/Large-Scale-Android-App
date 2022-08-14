@@ -40,7 +40,7 @@ internal fun LicensesUi(
 @Composable
 private fun Toolbar() {
     TopAppBar(
-        title = { Text(text = stringResource(R.string.licenses_title)) },
+        title = { Text(text = stringResource(R.string.stg_licensesScreen_title)) },
         elevation = 2.dp
     )
 }

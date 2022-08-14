@@ -63,13 +63,13 @@ private fun Toolbar(
     uiListener: TaskListListener
 ) {
     TopAppBar(
-        title = { Text("My tasks") },
+        title = { Text(stringResource(R.string.tsk_taskListScreen_title)) },
         elevation = 2.dp,
         actions = {
             IconButton(
                 onClick = { uiListener.onShowSettingsClicked() }
             ) {
-                Icon(Icons.Filled.Settings, stringResource(R.string.tsk_settings_button))
+                Icon(Icons.Filled.Settings, stringResource(R.string.tsk_taskListScreen_settingsButton))
             }
         }
     )
@@ -110,7 +110,7 @@ private fun Fab(
     FloatingActionButton(
         onClick = { uiListener.onAddTaskClicked() }
     ) {
-        Icon(Icons.Filled.Add, "")
+        Icon(Icons.Filled.Add, stringResource(R.string.tsk_taskListScreen_addTaskFab))
     }
 }
 
@@ -123,7 +123,7 @@ private fun EmptyContent(
     ) {
         Text(
             modifier = Modifier.align(Alignment.Center),
-            text = "Nothing here"
+            text = stringResource(R.string.tsk_taskListScreen_emptyListPlaceholder)
         )
     }
 }

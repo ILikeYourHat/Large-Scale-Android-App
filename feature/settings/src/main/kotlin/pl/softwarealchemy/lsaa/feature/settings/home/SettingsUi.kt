@@ -38,7 +38,7 @@ internal fun SettingsUi(
 @Composable
 private fun Toolbar() {
     TopAppBar(
-        title = { Text(text = stringResource(R.string.settings_title)) },
+        title = { Text(text = stringResource(R.string.stg_settingsScreen_title)) },
         elevation = 2.dp
     )
 }
@@ -52,7 +52,7 @@ private fun Content(
         modifier = modifier
     ) {
         Item(
-            text = stringResource(R.string.licenses_title),
+            text = stringResource(R.string.stg_licensesScreen_title),
             onClick = { uiListener.onLicensesClicked() }
         )
     }
