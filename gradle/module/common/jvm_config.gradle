@@ -7,6 +7,10 @@ compileJava {
     targetCompatibility = libs.versions.java.get()
 }
 
+compileKotlin {
+    kotlinOptions.allWarningsAsErrors = true
+}
+
 kotlin {
     explicitApi()
 }

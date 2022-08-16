@@ -9,6 +9,7 @@ android {
         targetSdk 32
     }
     kotlinOptions {
+        kotlinOptions.allWarningsAsErrors = true
         freeCompilerArgs += [
                 "-Xexplicit-api=strict"
         ]
