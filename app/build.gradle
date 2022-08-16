@@ -2,7 +2,7 @@ apply from: "$rootDir/gradle/module/app_android.gradle"
 
 android {
     defaultConfig {
-        applicationId "pl.softwarealchemy.lsaa"
+        applicationId "com.github.ilikeyourhat.lsaa"
     }
 }
 

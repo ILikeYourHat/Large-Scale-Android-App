@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="pl.softwarealchemy.lsaa.app">
+    package="com.github.ilikeyourhat.lsaa.app">
 
     <application
-        android:name="pl.softwarealchemy.lsaa.core.engine.MultiModuleApplication"
+        android:name="com.github.ilikeyourhat.lsaa.core.engine.MultiModuleApplication"
         android:allowBackup="false"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_global_name"
