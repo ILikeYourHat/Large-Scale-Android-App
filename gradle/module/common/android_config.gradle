@@ -8,6 +8,9 @@ android {
         minSdk 26
         targetSdk 32
     }
+
+    namespace "com.github.ilikeyourhat.lsaa" + project.path.replace(":", ".")
+
     kotlinOptions {
         kotlinOptions.allWarningsAsErrors = true
         freeCompilerArgs += [
