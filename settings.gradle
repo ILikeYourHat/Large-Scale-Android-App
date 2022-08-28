@@ -26,6 +26,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "LargeScaleAndroidApp"
-apply from: "$rootDir/modules.gradle"
+apply from: "$rootDir/gradle/modules.gradle"
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")

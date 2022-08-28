@@ -14,7 +14,7 @@ android {
     }
     signingConfigs {
         localRelease {
-            storeFile rootProject.file("local-key.jks")
+            storeFile rootProject.file("configurations/local-key.jks")
             storePassword 'testtest'
             keyAlias 'localRelease'
             keyPassword 'testtest'
@@ -26,7 +26,7 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"),
-                    rootProject.file("configuration/proguard-rules.pro")
+                    rootProject.file("configurations/proguard-rules.pro")
             matchingFallbacks = ["standalone"]
         }
         localRelease {
