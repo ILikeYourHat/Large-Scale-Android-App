@@ -61,9 +61,9 @@ junit5-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "ju
 junit5-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit5" }
 junit5-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit5" }
 
-mockk = { module = "io.mockk:mockk", version = "1.12.5" }
+mockk = { module = "io.mockk:mockk", version = "1.12.7" }
 
-robolectric = { module = "org.robolectric:robolectric", version = "4.8.1" }
+robolectric = { module = "org.robolectric:robolectric", version = "4.8.2" }
 
 room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
 room-ktx = { module = "androidx.room:room-ktx", version.ref ="room" }

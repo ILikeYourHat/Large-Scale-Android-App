@@ -21,7 +21,9 @@ internal class TaskListViewModel(
     val screenState: LiveData<TaskListUiState> = _screenState
 
     fun onCreate() {
-        refreshTasks()
+        viewModelScope.launch {
+            refreshTasks()
+        }
     }
 
     override fun onShowSettingsClicked() {
@@ -44,10 +46,8 @@ internal class TaskListViewModel(
         // noop
     }
 
-    private fun refreshTasks() {
-        viewModelScope.launch {
-            val tasks = tasksDao.getAll()
-            _screenState.postValue(TaskListUiState.Ready(tasks))
-        }
+    private suspend fun refreshTasks() {
+        val tasks = tasksDao.getAll()
+        _screenState.postValue(TaskListUiState.Ready(tasks))
     }
 }
