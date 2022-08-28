@@ -5,11 +5,13 @@
     <application
         android:name="com.github.ilikeyourhat.lsaa.core.engine.MultiModuleApplication"
         android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/full_backup_content"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_global_name"
         android:roundIcon="@drawable/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LargeScaleAndroidApp"
-        tools:ignore="DataExtractionRules" />
+        tools:targetApi="s" />
 
 </manifest>
