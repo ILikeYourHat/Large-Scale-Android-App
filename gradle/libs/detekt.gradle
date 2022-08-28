@@ -3,7 +3,7 @@ apply plugin: "io.gitlab.arturbosch.detekt"
 detekt {
     buildUponDefaultConfig = true
     parallel = true
-    config = files(rootProject.file("configutations/detekt.yml"))
+    config = files(rootProject.file("configurations/detekt.yml"))
 }
 
 tasks.named("check").configure {

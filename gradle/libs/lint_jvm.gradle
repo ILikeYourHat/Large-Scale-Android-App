@@ -1,7 +1,7 @@
 apply plugin: "com.android.lint"
 
 lintOptions {
-    lintConfig rootProject.file('configutations/lint.xml')
+    lintConfig rootProject.file('configurations/lint.xml')
     checkDependencies = true
     warningsAsErrors = true
 }
