@@ -1,0 +1,8 @@
+versionsFilter {
+    exclusiveQualifiers.addAll(
+            "rc",
+            "alpha(-.*)?","a",
+            "beta(-.*)?","b",
+            "canary(-.*)?","c"
+    )
+}

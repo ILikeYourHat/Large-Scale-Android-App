@@ -16,6 +16,8 @@ plugins {
     alias(libs.plugins.papparazzi) apply false
 }
 
+apply from: "$rootDir/gradle/libs/gradle_versions_filter.gradle"
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
