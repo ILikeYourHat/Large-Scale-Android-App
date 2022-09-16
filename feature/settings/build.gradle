@@ -6,7 +6,7 @@ apply from: "$rootDir/gradle/libs/robolectric.gradle"
 dependencies {
     implementation projects.feature.settings.contract
 
-    implementation libs.aboutLibraries.core
+    implementation libs.aboutLibraries
 
     testImplementation libs.assertK
     testImplementation libs.mockk

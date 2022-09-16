@@ -14,10 +14,8 @@ junit5 = "5.9.0"
 room = "2.4.3"
 
 [libraries]
-aboutLibraries-core = { module = "com.mikepenz:aboutlibraries-core", version.ref = "aboutLibraries" }
-aboutLibraries-gradlePlugin = { module = "com.mikepenz.aboutlibraries.plugin:aboutlibraries-plugin", version.ref = "aboutLibraries" }
+aboutLibraries = { module = "com.mikepenz:aboutlibraries-core", version.ref = "aboutLibraries" }
 
-android-gradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "androidGradlePlugin" }
 android-material = { module = "com.google.android.material:material", version = "1.6.1" }
 
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version = "1.5.1" }
@@ -50,13 +48,11 @@ desugaring = { module = "com.android.tools:desugar_jdk_libs", version = "1.1.8" 
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 
-kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
 
 junit4-api = { module = "junit:junit" , version = "4.13.2" }
 junit4-engine = { module = "org.junit.vintage:junit-vintage-engine", version.ref = "junit5" }
 
-junit5-gradlePlugin = { module = "de.mannodermaus.gradle.plugins:android-junit5", version = "1.8.2.1" }
 junit5-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit5" }
 junit5-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit5" }
 junit5-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit5" }
@@ -87,9 +83,14 @@ compose = [
 ]
 
 [plugins]
+aboutLibraries = { id = "com.mikepenz.aboutlibraries.plugin", version.ref = "aboutLibraries" }
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 axion = { id = "pl.allegro.tech.build.axion-release", version = "1.14.0" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 gradleVersionsFilter = { id = "se.ascp.gradle.gradle-versions-filter", version = "0.1.16" }
+junit5 = { id = "de.mannodermaus.android-junit5", version = "1.8.2.1" }
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 moduleGraphAssert = { id = "com.jraska.module.graph.assertion", version = "2.3.0" }
 papparazzi = { id = "app.cash.paparazzi", version = "1.0.0" }
