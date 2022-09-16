@@ -20,7 +20,13 @@ jobs:
       - name: Init Gradle cache
         uses: gradle/gradle-build-action@v2
 
-      - name: Run UI tests
+      - name: Run UI tests (Android 8)
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 26
+          script: ./gradlew connectedCheck
+
+      - name: Run UI tests (Android 10)
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 29
