@@ -1,6 +1,6 @@
 [versions]
 aboutLibraries = "10.4.0"
-androidGradlePlugin = "7.2.2"
+androidGradlePlugin = "7.3.0"
 compose = "1.2.1"
 composeCompiler = "1.3.1"
 coroutines = "1.6.4"
@@ -19,8 +19,6 @@ aboutLibraries = { module = "com.mikepenz:aboutlibraries-core", version.ref = "a
 android-material = { module = "com.google.android.material:material", version = "1.6.1" }
 
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version = "1.5.1" }
-# Remove when AS Dolphin will be available
-androidx-poolingContainer = { module = "androidx.customview:customview-poolingcontainer", version = "1.0.0" }
 androidx-test-core = { module = "androidx.test:core-ktx", version = "1.4.0" }
 
 assertK = { module = "com.willowtreeapps.assertk:assertk-jvm", version = "0.25" }
@@ -57,7 +55,7 @@ junit5-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "ju
 junit5-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit5" }
 junit5-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit5" }
 
-mockk = { module = "io.mockk:mockk", version = "1.12.7" }
+mockk = { module = "io.mockk:mockk", version = "1.12.8" }
 
 robolectric = { module = "org.robolectric:robolectric", version = "4.8.2" }
 
@@ -71,7 +69,6 @@ koin = [
     "koin-android"
 ]
 compose = [
-    "androidx-poolingContainer",
     "compose-compiler",
     "compose-ui",
     "compose-tooling",
@@ -86,7 +83,7 @@ compose = [
 aboutLibraries = { id = "com.mikepenz.aboutlibraries.plugin", version.ref = "aboutLibraries" }
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
-axion = { id = "pl.allegro.tech.build.axion-release", version = "1.14.0" }
+axion = { id = "pl.allegro.tech.build.axion-release", version = "1.14.1" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 gradleVersionsFilter = { id = "se.ascp.gradle.gradle-versions-filter", version = "0.1.16" }
 junit5 = { id = "de.mannodermaus.android-junit5", version = "1.8.2.1" }
