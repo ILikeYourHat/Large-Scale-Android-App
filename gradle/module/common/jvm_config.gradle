@@ -8,7 +8,10 @@ compileJava {
 }
 
 compileKotlin {
-    kotlinOptions.allWarningsAsErrors = true
+    kotlinOptions {
+        allWarningsAsErrors = true
+        jvmTarget = libs.versions.java.get()
+    }
 }
 
 kotlin {

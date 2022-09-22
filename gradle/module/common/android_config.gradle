@@ -16,6 +16,7 @@ android {
         freeCompilerArgs += [
                 "-Xexplicit-api=strict"
         ]
+        jvmTarget = libs.versions.java.get()
     }
     compileOptions {
         coreLibraryDesugaringEnabled true
