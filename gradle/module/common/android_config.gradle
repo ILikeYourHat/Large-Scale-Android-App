@@ -3,7 +3,7 @@ apply from: "$rootDir/gradle/libs/lint_android.gradle"
 apply from: "$rootDir/gradle/libs/detekt.gradle"
 
 android {
-    compileSdk 32
+    compileSdk 32 // Bump to 33 when fixed: https://github.com/cashapp/paparazzi/issues/596
     defaultConfig {
         minSdk 26
         targetSdk 32

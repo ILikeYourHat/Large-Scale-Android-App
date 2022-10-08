@@ -8,7 +8,6 @@ import org.koin.dsl.module
 public object TasksDbKoinModule {
 
     public operator fun invoke(): Module = module {
-
         single {
             Room.databaseBuilder(
                 androidContext(),
