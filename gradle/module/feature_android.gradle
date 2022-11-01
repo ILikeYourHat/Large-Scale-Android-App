@@ -6,6 +6,8 @@ apply from: "$rootDir/gradle/libs/papparazzi.gradle"
 ext.moduleNameAssertAlias = "Feature"
 
 dependencies {
-    implementation projects.core.engine
+    implementation projects.core.engine.contract
+    implementation projects.util.android
+
     implementation libs.androidx.appcompat
 }

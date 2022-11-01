@@ -1,4 +1,4 @@
-apply from: "$rootDir/gradle/module/tool_android.gradle"
+apply from: "$rootDir/gradle/module/util_android.gradle"
 apply from: "$rootDir/gradle/libs/junit5.gradle"
 
 android {

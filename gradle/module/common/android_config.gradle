@@ -27,7 +27,4 @@ android {
 
 dependencies {
     coreLibraryDesugaring libs.desugaring
-    if (project.path != ":util:android") {
-        implementation projects.util.android
-    }
 }

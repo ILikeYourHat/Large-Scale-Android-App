@@ -1,0 +1,5 @@
+apply from: "$rootDir/gradle/module/contract_android.gradle"
+
+dependencies {
+    api libs.bundles.koin
+}

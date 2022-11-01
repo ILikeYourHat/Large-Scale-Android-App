@@ -1,6 +1,6 @@
 package com.github.ilikeyourhat.lsaa.feature.settings
 
-import com.github.ilikeyourhat.lsaa.core.engine.ModuleInitializer
+import com.github.ilikeyourhat.lsaa.core.engine.contract.ModuleInitializer
 import com.github.ilikeyourhat.lsaa.feature.settings.contract.SettingsNavigator
 import com.github.ilikeyourhat.lsaa.feature.settings.home.SettingsViewModel
 import com.github.ilikeyourhat.lsaa.feature.settings.licenses.repository.LicensesRepository

@@ -1,1 +1,1 @@
--keep class * extends com.github.ilikeyourhat.lsaa.core.engine.ModuleInitializer { *; }
+-keep class * extends com.github.ilikeyourhat.lsaa.core.engine.contract.ModuleInitializer { *; }

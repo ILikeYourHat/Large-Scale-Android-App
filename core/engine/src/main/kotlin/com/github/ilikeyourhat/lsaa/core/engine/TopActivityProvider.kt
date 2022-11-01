@@ -6,10 +6,11 @@ import android.os.Bundle
 import android.os.Looper
 import androidx.annotation.AnyThread
 import androidx.annotation.MainThread
+import com.github.ilikeyourhat.lsaa.core.engine.contract.ITopActivityProvider
 
 public class TopActivityProvider(
     private val isMainThread: () -> Boolean = { Looper.getMainLooper() == Looper.myLooper() }
-) {
+) : ITopActivityProvider {
 
     private val pendingActions = mutableListOf<(Activity) -> Unit>()
 
@@ -20,7 +21,7 @@ public class TopActivityProvider(
         }
 
     @AnyThread
-    public fun onTopActivity(action: (Activity) -> Unit) {
+    override fun onTopActivity(action: (Activity) -> Unit) {
         val topActivity = topActivity
 
         if (topActivity == null) {

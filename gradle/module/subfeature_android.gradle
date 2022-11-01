@@ -3,3 +3,7 @@ apply from: "$rootDir/gradle/module/common/android_config.gradle"
 apply from: "$rootDir/gradle/module/common/single_build_variant.gradle"
 
 ext.moduleNameAssertAlias = "SubFeature"
+
+dependencies {
+    implementation projects.util.android
+}

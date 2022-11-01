@@ -3,13 +3,11 @@ apply plugin: "com.jraska.module.graph.assertion"
 moduleGraphAssert {
     maxHeight = 3
     allowed = [
-            'Feature -> Contract',
             'App -> Feature',
-            'App -> Tool',
-            'Feature -> Tool',
+            'Feature -> Contract',
             'Feature -> SubFeature',
-            'SubFeature -> Tool',
-            'Tool -> Tool',
+            'Feature -> Util',
+            'SubFeature -> Util',
     ]
 }
 

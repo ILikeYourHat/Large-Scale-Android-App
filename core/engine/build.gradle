@@ -1,4 +1,4 @@
-apply from: "$rootDir/gradle/module/tool_android.gradle"
+apply from: "$rootDir/gradle/module/feature_android.gradle"
 apply from: "$rootDir/gradle/libs/junit5.gradle"
 
 android {
@@ -8,7 +8,5 @@ android {
 }
 
 dependencies {
-    api libs.bundles.koin
-
     implementation libs.kotlin.reflect
 }

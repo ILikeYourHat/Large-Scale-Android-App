@@ -1,13 +1,13 @@
 package com.github.ilikeyourhat.lsaa.feature.settings
 
 import android.content.Intent
-import com.github.ilikeyourhat.lsaa.core.engine.TopActivityProvider
+import com.github.ilikeyourhat.lsaa.core.engine.contract.ITopActivityProvider
 import com.github.ilikeyourhat.lsaa.feature.settings.contract.SettingsNavigator
 import com.github.ilikeyourhat.lsaa.feature.settings.home.SettingsActivity
 import com.github.ilikeyourhat.lsaa.feature.settings.licenses.LicensesActivity
 
 internal class InternalSettingsNavigator(
-    private val topActivityProvider: TopActivityProvider
+    private val topActivityProvider: ITopActivityProvider
 ) : SettingsNavigator {
 
     override fun goToSettings() {

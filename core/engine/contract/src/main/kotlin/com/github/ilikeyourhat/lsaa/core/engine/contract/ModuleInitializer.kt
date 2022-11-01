@@ -1,4 +1,4 @@
-package com.github.ilikeyourhat.lsaa.core.engine
+package com.github.ilikeyourhat.lsaa.core.engine.contract
 
 import org.koin.dsl.ModuleDeclaration
 

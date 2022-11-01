@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
+import com.github.ilikeyourhat.lsaa.core.engine.contract.ModuleInitializer
 import com.github.ilikeyourhat.lsaa.util.android.getApplicationInfoCompat
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
