@@ -1,0 +1,8 @@
+apply from: "$rootDir/gradle/module/tool_android.gradle"
+apply from: "$rootDir/gradle/libs/junit5.gradle"
+
+android {
+    defaultConfig {
+        consumerProguardFiles "proguard-rules.pro"
+    }
+}
