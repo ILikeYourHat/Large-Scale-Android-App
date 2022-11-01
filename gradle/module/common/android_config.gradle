@@ -3,10 +3,10 @@ apply from: "$rootDir/gradle/libs/lint_android.gradle"
 apply from: "$rootDir/gradle/libs/detekt.gradle"
 
 android {
-    compileSdk 32 // Bump to 33 when fixed: https://github.com/cashapp/paparazzi/issues/596
+    compileSdk libs.versions.compileSdk.get() as int
     defaultConfig {
-        minSdk 26
-        targetSdk 32
+        minSdk libs.versions.minSdk.get() as int
+        targetSdk libs.versions.targetSdk.get() as int
     }
 
     namespace "com.github.ilikeyourhat.lsaa" + project.path.replace(":", ".")

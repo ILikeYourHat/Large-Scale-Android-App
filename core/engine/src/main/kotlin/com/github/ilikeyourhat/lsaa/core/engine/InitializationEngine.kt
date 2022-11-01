@@ -1,7 +1,9 @@
 package com.github.ilikeyourhat.lsaa.core.engine
 
 import android.app.Application
+import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import org.koin.android.ext.koin.androidContext
@@ -25,8 +27,20 @@ internal class InitializationEngine {
 
     private val Application.metaData: Bundle
         get() = packageManager
-            .getApplicationInfo(packageName, PackageManager.GET_META_DATA)
+            .getApplicationInfoCompat(packageName, PackageManager.GET_META_DATA)
             .metaData
+
+    private fun PackageManager.getApplicationInfoCompat(
+        packageName: String,
+        flags: Int
+    ): ApplicationInfo {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            getApplicationInfo(packageName, PackageManager.ApplicationInfoFlags.of(flags.toLong()))
+        } else {
+            @Suppress("DEPRECATION")
+            getApplicationInfo(packageName, PackageManager.GET_META_DATA)
+        }
+    }
 
     private fun extractModules(metaData: Bundle): List<Module> {
         return metaData.keySet()

@@ -1,1 +1,3 @@
-apply plugin: "app.cash.paparazzi"
+// TODO Waiting for compileSdk 33 support https://github.com/cashapp/paparazzi/issues/604
+// apply plugin: "app.cash.paparazzi"
+apply plugin: "dev.chrisbanes.paparazzi"
