@@ -84,7 +84,7 @@ compose = [
 aboutLibraries = { id = "com.mikepenz.aboutlibraries.plugin", version.ref = "aboutLibraries" }
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
-axion = { id = "pl.allegro.tech.build.axion-release", version = "1.14.2" }
+axion = { id = "pl.allegro.tech.build.axion-release", version = "1.14.3" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 gradleVersionsFilter = { id = "se.ascp.gradle.gradle-versions-filter", version = "0.1.16" }
 junit5 = { id = "de.mannodermaus.android-junit5", version = "1.8.2.1" }
