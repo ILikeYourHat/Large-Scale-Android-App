@@ -44,8 +44,8 @@ detekt-compose = { module = "ru.kode:detekt-rules-compose", version = "1.2.2" }
 
 desugaring = { module = "com.android.tools:desugar_jdk_libs", version = "1.2.2" }
 
-koin-core = { module = "io.insert-koin:koin-core", version = "3.2.2" }
-koin-android = { module = "io.insert-koin:koin-android", version = "3.3.0" }
+koin-core = { module = "io.insert-koin:koin-core", version = "3.3.0" }
+koin-android = { module = "io.insert-koin:koin-android", version = "3.3.1" }
 
 kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
 
