@@ -94,4 +94,4 @@ kover = { id = "org.jetbrains.kotlinx.kover", version = "0.6.1" }
 moduleGraphAssert = { id = "com.jraska.module.graph.assertion", version = "2.3.0" }
 # TODO Waiting for compileSdk 33 support https://github.com/cashapp/paparazzi/issues/604
 # papparazzi = { id = "app.cash.paparazzi", version = "1.1.0" }
-papparazzi = { id = "dev.chrisbanes.paparazzi", version = "1.1.0-sdk33-alpha02" }
+papparazzi = { id = "dev.chrisbanes.paparazzi", version = "1.1.0-sdk33-alpha04" }
