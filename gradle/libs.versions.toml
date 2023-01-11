@@ -20,7 +20,7 @@ aboutLibraries = { module = "com.mikepenz:aboutlibraries-core", version.ref = "a
 
 android-material = { module = "com.google.android.material:material", version = "1.7.0" }
 
-androidx-appcompat = { module = "androidx.appcompat:appcompat", version = "1.5.1" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version = "1.6.0" }
 androidx-test-core = { module = "androidx.test:core-ktx", version = "1.5.0" }
 
 assertK = { module = "com.willowtreeapps.assertk:assertk-jvm", version = "0.25" }
