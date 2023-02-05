@@ -12,7 +12,7 @@ detekt = "1.22.0"
 java = "11"
 kotlin = "1.7.21"
 ksp = "1.7.21-1.0.8"
-junit5 = "5.9.1"
+junit5 = "5.9.2"
 room = "2.5.0"
 
 [libraries]
