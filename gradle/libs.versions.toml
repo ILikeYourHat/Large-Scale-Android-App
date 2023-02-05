@@ -11,7 +11,7 @@ coroutines = "1.6.4"
 detekt = "1.22.0"
 java = "11"
 kotlin = "1.8.0"
-ksp = "1.8.0-1.0.9"
+ksp = "1.8.10-1.0.9"
 junit5 = "5.9.2"
 room = "2.5.0"
 
