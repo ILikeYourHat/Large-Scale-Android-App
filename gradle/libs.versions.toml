@@ -4,7 +4,7 @@ compileSdk = "33"
 targetSdk = "33"
 
 aboutLibraries = "10.5.2"
-androidGradlePlugin = "7.4.1"
+androidGradlePlugin = "7.4.2"
 composeCompiler = "1.4.0"
 coroutines = "1.6.4"
 detekt = "1.22.0"
