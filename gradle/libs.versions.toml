@@ -90,5 +90,5 @@ junit5 = { id = "de.mannodermaus.android-junit5", version = "1.8.2.1" }
 kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 kover = { id = "org.jetbrains.kotlinx.kover", version = "0.6.1" }
-moduleGraphAssert = { id = "com.jraska.module.graph.assertion", version = "2.3.0" }
+moduleGraphAssert = { id = "com.jraska.module.graph.assertion", version = "2.5.0" }
 papparazzi = { id = "app.cash.paparazzi", version = "1.2.0" }
