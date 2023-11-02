@@ -41,7 +41,7 @@ coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", ve
 detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
 detekt-compose = { module = "ru.kode:detekt-rules-compose", version = "1.2.2" }
 
-desugaring = { module = "com.android.tools:desugar_jdk_libs", version = "2.0.2" }
+desugaring = { module = "com.android.tools:desugar_jdk_libs", version = "2.0.4" }
 
 koin-core = { module = "io.insert-koin:koin-core", version = "3.3.2" }
 koin-android = { module = "io.insert-koin:koin-android", version = "3.3.2" }
