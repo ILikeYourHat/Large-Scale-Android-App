@@ -3,7 +3,7 @@ minSdk = "26"
 compileSdk = "33"
 targetSdk = "33"
 
-aboutLibraries = "10.5.2"
+aboutLibraries = "10.9.2"
 androidGradlePlugin = "7.4.1"
 composeCompiler = "1.4.0"
 coroutines = "1.6.4"
